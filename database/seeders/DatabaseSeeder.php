@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ConsultationList;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,12 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'first_name' => 'Administrados',
-            'last_name'  => 'Del Sistema',
-            'email' => 'rgasperi@smartcarebilling.com',
-        ]);
+        $this->call(UserSeeder::class);
+        $this->call(CptAreaSeeder::class);
+        $this->call(CptSeeder::class);
+        $this->call(InsuranceSeeder::class);
+        $this->call(MedicalSpecialitySeeder::class);
+        $this->call(MedicineSeeder::class);
+        $this->call(ConsultationList::class);
+        $this->call(ConsultationFieldSeeder::class);
+        $this->call(DiagnosticSeeder::class);
     }
 }
