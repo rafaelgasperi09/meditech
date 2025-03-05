@@ -8,4 +8,10 @@ class UserLog extends Model
 {
     protected $table='user_logs';
     protected $guarded=['id'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+
 }

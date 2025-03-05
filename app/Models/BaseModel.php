@@ -133,4 +133,8 @@ class BaseModel extends Model
     public function getUpdatedAtAttribute($attr) {
         return Carbon::parse($attr)->format('d-m-Y'); //Change the format to whichever you desire
     }
+
+    public function files(){
+        return $this->hasMany(File::class)->where('table_name',$this->getTable());
+    }
 }

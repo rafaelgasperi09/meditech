@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('rapid_access', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('type',15)->comment('MASTER , CLIENT , USER');
-            $table->foreignId('client_id')->references('id')->on('clients')->nullable()->onDelete('cascade')->comment('Client Owner if type CLIENT');
-            $table->foreignId('user_id')->references('id')->on('users')->nullable()->onDelete('cascade')->comment('User Owner if type USER');
+            $table->foreignId('client_id')->nullable()->references('id')->on('clients')->nullable()->onDelete('cascade')->comment('Client Owner if type CLIENT');
+            $table->foreignId('user_id')->nullable()->references('id')->on('users')->nullable()->onDelete('cascade')->comment('User Owner if type USER');
             $table->foreignId('consultation_field_id')->references('id')->on('consultation_fields')->onDelete('cascade');
             $table->foreignId('cpt_id')->references('id')->on('cpts')->onDelete('cascade');
             $table->boolean('active')->default(1);
