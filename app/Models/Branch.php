@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ConsultationList extends BaseModel
+class Branch extends Model
 {
-    protected $guarded=['id'];
+    //
 }
