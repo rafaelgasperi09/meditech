@@ -8,7 +8,7 @@ class ConsultationFieldTemplate extends BaseModel
 {
     protected $table='consultation_fields_templates';
 
-    public function cleint(){
+    public function client(){
         return $this->belongsTo(Client::class);
     }
 
