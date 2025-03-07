@@ -13,6 +13,7 @@ class DataTable extends Component
 
     public $model; // Modelo dinámico
     public $columns = []; // Columnas a mostrar
+    public $actions = [];
     public $search; // Búsqueda
     public $sortField = 'id'; // Ordenación por defecto
     public $sortDirection = 'asc'; // Dirección de orden
@@ -21,11 +22,17 @@ class DataTable extends Component
 
     public $count = 0;
 
-    public function mount($model, $columns,$pagination=10)
+
+
+    public $route_name;
+
+    public function mount($model, $columns,$pagination=10,$actions='',$routename='')
     {
         $this->model = $model; // Convierte el string en una instancia de modelo
         $this->columns = $columns;
         $this->pagination = $pagination;
+        $this->actions = array_values($actions);
+        $this->route_name = $routename;
     }
 
     /*public function updatingSearch()
@@ -64,8 +71,5 @@ class DataTable extends Component
         ]);
     }
 
-    public function increment()
-    {
-        $this->count++;
-    }
+
 }

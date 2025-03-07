@@ -5,7 +5,7 @@
         <tr>
             @foreach ($columns as $column)
                 <th class="border p-2 cursor-pointer" wire:click="sortBy('{{ $column }}')">
-                    {{ ucfirst($column) }}
+                    {{ __($route_name.'.'.$column) }}
                     @if ($sortField === $column)
                         @if ($sortDirection === 'asc') ▲ @else ▼ @endif
                     @endif
@@ -18,9 +18,21 @@
             <tr class="border">
                 @foreach ($columns as $column)
                     <td class="border p-2">
-
                         @if(App\Models\Helper::urlIsImage($row->$column))
                             <img src="{{$row->$columns}}">
+                        @elseif($column=='acciones')
+                            @if(in_array('edit',$actions))
+                                <x-action-link href="{{route($route_name.'.edit',$row->id)}}" title="{{ __('button.edit') }}"><i class="fa-solid fa-edit" aria-hidden="true"></i> </x-action-link>
+                            @endif
+                            @if(in_array('delete',$actions))
+                                    <form method="post" action="{{ route($route_name.'.destroy',$row->id) }}" class="inline-block">
+                                        @csrf
+                                        @method('delete')
+                                        <x-danger-button class="ms-3" title="{{ __('button.delete') }}">
+                                            <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                                        </x-danger-button>
+                                    </form>
+                            @endif
                         @else
                             {{ $row->$column }}
                         @endif

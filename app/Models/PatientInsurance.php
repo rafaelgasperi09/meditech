@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PatientInsurance extends BaseModel
 {
+
     public function patient(){
         return $this->belongsTo(Patient::class);
     }
