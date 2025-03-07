@@ -1,0 +1,51 @@
+
+.selector-btn-type .selector-items {
+    position: relative;
+    top: 0px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: #FFFFFF;
+    overflow: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: inherit;
+    margin-top: 5px;
+}
+.selector-items {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    max-height: 132px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0px 6px;
+    transition: 1s all;
+    padding-top: 12px;
+}
+.selector-items .sel-list-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+.selector-btn-type .sel-list-item {
+    width: 23%;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    min-height: 50px;
+    padding-top: 15px;
+    display: flex;
+}
+
+.location-active {
+    border: 4px;
+    background-color: #005dba;
+    color: #FFFFFF;
+}
+.sel-list-item {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    cursor: hand;
+    cursor: pointer;
+    padding: 3px;
+    padding-left: 25px;
+    transition: 0.3s all;
+}
