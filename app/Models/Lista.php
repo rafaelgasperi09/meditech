@@ -31,4 +31,12 @@ class Lista extends Model
             'PT'=>'PT: Permiso temporal de permanencia',
         ];
     }
+
+    public static function gender(){
+
+        return [
+            'M'=>'Masculino',
+            'F'=>'Femenino',
+        ];
+    }
 }

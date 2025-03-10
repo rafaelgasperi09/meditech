@@ -14,6 +14,13 @@
 
                     <form method="POST" action="{{ route('patient.store') }}" enctype="multipart/form-data">
                     @csrf
+                        <!-- ID NUMBER -->
+                        <div>
+                            <x-input-label for="id_number" :value="__('patient.full_id_number')" />
+                            <x-select-input name="id_type" :options="\App\Models\Lista::documentType()" selected="CC" class="block  inline-block"/>
+                            <x-text-input id="id_number" class="block  inline-block" type="number" name="id_number" :value="old('id_number')"/>
+                            <x-input-error :messages="$errors->get('id_number')" class="mt-2" />
+                        </div>
                         <!-- First Name -->
                         <div>
                             <x-input-label for="first_name" :value="__('patient.first_name')" />
@@ -22,15 +29,21 @@
                         </div>
                         <!-- Last Name -->
                         <div>
-                            <x-input-label for="last_name" :value="__('patient.last_name')" />
+                            <x-input-label for="last_name" :value="__('patient.last_name')"/>
                             <x-text-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus/>
                             <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
                         </div>
-                        <!-- ID NUMBER -->
+                        <!-- GENDER -->
                         <div>
-                            <x-input-label for="id_number" :value="__('patient.full_id_number')" />
-                            <x-text-input id="id_number" class="block mt-1 w-full" type="number" name="id_number" :value="old('id_number')"/>
-                            <x-input-error :messages="$errors->get('id_number')" class="mt-2" />
+                            <x-input-label for="gender" :value="__('patient.gender')" />
+                            <x-select-input name="gender" :options="\App\Models\Lista::gender()" selected="" class="block w-full"/>
+                            <x-input-error :messages="$errors->get('gender')" class="mt-2" />
+                        </div>
+                        <!-- BIRTHDATE -->
+                        <div>
+                            <x-input-label for="birthdate" :value="__('patient.birthdate')" />
+                            <x-text-input id="birthdate" class="block mt-1 w-full" type="date" name="date" :value="old('birthdate')"/>
+                            <x-input-error :messages="$errors->get('birthdate')" class="mt-2" />
                         </div>
                         <!-- EMAIL -->
                         <div>
@@ -40,15 +53,15 @@
                         </div>
                         <!-- PHYSICAL ADDRESS -->
                         <div>
-                            <x-input-label for="phone" :value="__('patient.physical_address')" />
-                            <x-textarea-input id="phone" class="block mt-1 w-full" type="email" name="phone" :value="old('phone')"/>
+                            <x-input-label for="physical_address" :value="__('patient.physical_address')" />
+                            <x-textarea-input id="physical_address" class="block mt-1 w-full" type="email" name="physical_address" :value="old('physical_address')"/>
                             <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                         </div>
                         <!-- BILLING ADDRESS -->
                         <div>
-                            <x-input-label for="whatsapp" :value="__('patient.billing_address')" />
-                            <x-textarea-input id="whatsapp" class="block mt-1 w-full" type="email" name="whatsapp" :value="old('whatsapp')"/>
-                            <x-input-error :messages="$errors->get('whatsapp')" class="mt-2" />
+                            <x-input-label for="billing_address" :value="__('patient.billing_address')" />
+                            <x-textarea-input id="billing_address" class="block mt-1 w-full" type="email" name="billing_address" :value="old('billing_address')"/>
+                            <x-input-error :messages="$errors->get('billing_address')" class="mt-2" />
                         </div>
                         <!-- PHONE -->
                         <div>
@@ -62,7 +75,12 @@
                             <x-text-input id="whatsapp" class="block mt-1 w-full" type="email" name="whatsapp" :value="old('whatsapp')"/>
                             <x-input-error :messages="$errors->get('whatsapp')" class="mt-2" />
                         </div>
-
+                        <!-- BLOOD TYPE -->
+                        <div>
+                            <x-input-label for="gender" :value="__('patient.blood_type')" />
+                            <x-select-input name="gender" :options="\App\Models\Lista::bloodTypes()" selected="" class="block w-full"/>
+                            <x-input-error :messages="$errors->get('gender')" class="mt-2" />
+                        </div>
                         <div class="flex items-center justify-end mt-4">
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('client.index') }}">
                                 {{ __('button.cancel') }}

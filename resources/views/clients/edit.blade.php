@@ -45,7 +45,7 @@
                         <!-- IMAGE -->
                         <div>
                             <x-input-label for="logo" :value="__('client.logo')" />
-                            <x-text-input id="logo" class="block mt-1 w-full" type="file" name="logo" :value="old('logo')" accept="image/*"/>
+                            <x-text-input id="logo" class="block mt-1 w-full" type="file" name="logo" value="" accept="image/*"/>
                             <x-input-error :messages="$errors->get('logo')" class="mt-2" />
                         </div>
                         <div class="flex items-center justify-end mt-4">
