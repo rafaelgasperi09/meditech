@@ -2,9 +2,15 @@
 
 namespace Database\Factories;
 
+use App\Models\Client;
+use App\Models\User;
+use App\Models\UserClient;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
@@ -41,5 +47,31 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    /**
+     * Configure the model factory.
+     */
+    public function configure(): static
+    {
+        return $this->afterCreating(function (User $u) {
+            $client = Client::inRandomOrder()->take(1)->first();
+            if($u->id==1){
+                $u->assignRole('administrador');
+            }else{
+                $uc = UserClient::whereClientId($client->id)->count();
+                if($uc==0){
+                    $u->assignRole('cliente');
+                }else{
+                    $u->assignRole('usuario');
+                }
+
+                UserClient::create([
+                    'user_id'=>$u->id,
+                    'client_id'=>$client->id,
+                ]);
+            }
+
+        });
     }
 }

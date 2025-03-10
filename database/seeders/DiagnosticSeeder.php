@@ -29,7 +29,7 @@ class DiagnosticSeeder extends Seeder
                         Diagnostic::create([
                             'code'=>$code,
                             'icd10_code'=>$code,
-                            'description'=>$line[1],
+                            'description'=>$line[2],
                             'description_es'=>$line[3],
                             'user_id'=>1,
                         ]);
