@@ -33,7 +33,10 @@
             <!-- Page Content -->
             <main>
                 {{ $slot }}
+
+                @include('partials.message')
             </main>
         </div>
+
     </body>
 </html>

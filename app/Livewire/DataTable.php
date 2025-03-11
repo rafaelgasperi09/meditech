@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 
+use Illuminate\Support\Facades\Schema;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
@@ -12,6 +13,7 @@ class DataTable extends Component
     use WithPagination;
 
     public $model; // Modelo dinámico
+    public $class;
     public $columns = []; // Columnas a mostrar
     public $actions = [];
     public $search; // Búsqueda
@@ -29,6 +31,7 @@ class DataTable extends Component
     public function mount($model, $columns,$pagination=10,$actions='',$routename='')
     {
         $this->model = $model; // Convierte el string en una instancia de modelo
+        $this->class = new $model;
         $this->columns = $columns;
         $this->pagination = $pagination;
         $this->actions = array_values($actions);
@@ -58,8 +61,12 @@ class DataTable extends Component
         ->when($this->search, function (Builder $query) {
             $query->where(function ($q) { // Asegura que las condiciones sean correctas
                 foreach ($this->columns as $column) {
-                    if(!in_array($column,['acciones']))
+                    if($column=='full_name')
+                        $q->orWhereRaw("first_name like '%" . $this->search . "%' or last_name like '%" . $this->search . "%'");
+
+                    if(Schema::hasColumn($this->class->getTable(),$column))
                         $q->orWhere($column, 'like', '%' . $this->search . '%');
+
                 }
             });
         })

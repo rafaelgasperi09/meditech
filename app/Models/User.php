@@ -48,11 +48,24 @@ class User extends Authenticatable
         ];
     }
 
+    protected static function booted()
+    {
+        if(auth()->user()->hasRole('cliente')){
+            self::addGlobalScope('client_filter', function ($query){
+                $query->whereHas("clients",function ($q){
+                    $q->whereIn('client_id',auth()->user()->clients()->pluck('client_id'));
+                });
+            });
+        }
+    }
+
     public function getFullNameAttribute() {
         return $this->first_name . ' ' . $this->last_name;
     }
 
     public function clients(){
-        return $this->belongsToMany(Client::class);
+        return $this->belongsToMany(Client::class,'user_clients');
     }
+
+
 }

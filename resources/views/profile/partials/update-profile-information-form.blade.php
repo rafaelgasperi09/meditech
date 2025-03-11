@@ -1,4 +1,12 @@
 <section>
+    @php
+    $client_selected = App\Models\UserClient::whereUserId(auth()->user()->id)->pluck('client_id')->toArray();
+    if(auth()->user()->can('clientes')){
+          $clients = \App\Models\Client::pluck('name','id')->toArray();
+    }else{
+          $clients = \App\Models\Client::whereIn('id',App\Models\UserClient::whereUserId(auth()->user()->id)->pluck('client_id'))->pluck('name','id')->toArray();
+    }
+    @endphp
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}
@@ -18,19 +26,19 @@
         @method('patch')
 
         <div>
-            <x-input-label for="first_name" :value="__('Nombre')" />
+            <x-input-label for="first_name" :value="__('user.first_name')" />
             <x-text-input id="first_name" name="first_name" type="text" class="mt-1 block w-full" :value="old('name', $user->first_name)" required autofocus autocomplete="first_name" />
             <x-input-error class="mt-2" :messages="$errors->get('first_name')" />
         </div>
 
         <div>
-            <x-input-label for="last_name" :value="__('Apellido')" />
+            <x-input-label for="last_name" :value="__('user.last_name')" />
             <x-text-input id="last_name" name="last_name" type="text" class="mt-1 block w-full" :value="old('name', $user->last_name)" required autofocus autocomplete="last_name" />
             <x-input-error class="mt-2" :messages="$errors->get('last_name')" />
         </div>
 
         <div>
-            <x-input-label for="email" :value="__('Email')" />
+            <x-input-label for="email" :value="__('user.email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
@@ -52,7 +60,11 @@
                 </div>
             @endif
         </div>
-
+        <div>
+            <x-input-label for="client" :value="__('user.client')" />
+            <x-select-input name="client" :options="$clients" :selected="$client_selected" class="block  w-full"/>
+            <x-input-error class="mt-2" :messages="$errors->get('last_name')" />
+        </div>
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 

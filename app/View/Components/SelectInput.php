@@ -10,10 +10,10 @@ class SelectInput extends Component
 {
 
     public array $options;
-    public ?string $selected;
+    public ?array $selected;
     public string $name;
 
-    public function __construct(string $name, array $options = [], ?string $selected = null)
+    public function __construct(string $name, array $options = [], ?array $selected = [])
     {
         $this->name = $name;
         $this->options = $options;

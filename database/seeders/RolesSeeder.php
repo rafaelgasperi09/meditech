@@ -17,7 +17,7 @@ class RolesSeeder extends Seeder
         $roleSuperadmin = Role::create(['name' => 'administrador']);
 
 
-        $modulos =['clientes','sucursales','consultorios','pacientes','agenda','configuraciones','formularios','medicinas','inventarios'];
+        $modulos =['clientes','sucursales','consultorios','pacientes','agenda','configuraciones','formularios','medicinas','inventarios','usuarios'];
 
         foreach ($modulos as $m){
             $permission = Permission::create(['name' => $m]);
@@ -28,7 +28,7 @@ class RolesSeeder extends Seeder
         $rolCliente = Role::create(['name' => 'cliente']);
 
 
-        $modulos =['sucursales','consultorios','pacientes','agenda','configuraciones','formularios','medicinas','inventarios'];
+        $modulos =['sucursales','consultorios','pacientes','agenda','configuraciones','formularios','medicinas','inventarios','usuarios'];
 
         foreach ($modulos as $m){
             $permission = Permission::where('name',$m)->first();
