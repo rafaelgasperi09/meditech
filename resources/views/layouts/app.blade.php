@@ -11,11 +11,12 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link href="{{url('styles/default.css')}}" rel="stylesheet" />
-
+        @yield('css')
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <script src="https://kit.fontawesome.com/652b8e06e9.js" crossorigin="anonymous"></script>
+        @yield('scripts')
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

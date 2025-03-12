@@ -2,7 +2,7 @@
 
 return [
     'title'=>'Usuario',
-    'titles'=>'Usuario',
+    'titles'=>'Usuarios',
     'id'=>'Id',
     'first_name'=>'Nombre',
     'last_name'=>'Apellido',

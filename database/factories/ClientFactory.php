@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Branch;
+use App\Models\Client;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -27,5 +29,16 @@ class ClientFactory extends Factory
             'whatsapp' => fake()->phoneNumber,
             'logo'=>fake()->imageUrl(),
         ];
+    }
+
+    /**
+     * Configure the model factory.
+     */
+    public function configure(): static
+    {
+        return $this->afterCreating(function (Client $c) {
+
+            Branch::factory()->count(1)->create(['client_id'=>$c->id]);
+        });
     }
 }

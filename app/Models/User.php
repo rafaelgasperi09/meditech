@@ -50,7 +50,7 @@ class User extends Authenticatable
 
     protected static function booted()
     {
-        if(auth()->user()->hasRole('cliente')){
+        if(auth()->check() && auth()->user()->hasRole('cliente')){
             self::addGlobalScope('client_filter', function ($query){
                 $query->whereHas("clients",function ($q){
                     $q->whereIn('client_id',auth()->user()->clients()->pluck('client_id'));

@@ -17,20 +17,23 @@
                     </x-nav-link>
                     @can('clientes')
                     <x-nav-link :href="route('client.index')" :active="request()->routeIs('clients')">
-                        {{ __('Clientes') }}
+                        {{ __('client.titles') }}
                     </x-nav-link>
                     @endcan
                     @can('pacientes')
                     <x-nav-link :href="route('patient.index')" :active="request()->routeIs('patients')">
-                        {{ __('Pacientes') }}
+                        {{ __('patient.titles') }}
                     </x-nav-link>
                     @endcan
                     @can('usuarios')
                     <x-nav-link :href="route('user.index')" :active="request()->routeIs('users')">
-                        {{ __('Usuarios') }}
+                        {{ __('user.titles') }}
                     </x-nav-link>
                     @endcan
                     @can('agenda')
+                    <x-nav-link :href="route('appointment.calendar')" :active="request()->routeIs('appointments/calendar')">
+                        {{ __('appointment.titles') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('consultation.create')" :active="request()->routeIs('consultation/create')">
                         {{ __('Nueva Consulta') }}
                     </x-nav-link>

@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Patient;
+use App\Models\Appointment;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PatientSeeder extends Seeder
+class AppointmentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $clients = Patient::factory()->count(100)->create();
+        $clients = Appointment::factory()->count(20)->make();
 
         foreach ($clients as $client) {
             $this->command->info($client);

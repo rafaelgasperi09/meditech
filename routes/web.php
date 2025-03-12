@@ -5,6 +5,7 @@ use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\UserController;
+use \App\Http\Controllers\AppointmentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -72,6 +73,20 @@ Route::group(array('prefix' => 'users','middleware'=>['auth','verified']), funct
     Route::post('/{id}/update', [UserController::class, 'update'])->name('user.update');
 
     Route::delete('/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+});
+
+Route::group(array('prefix' => 'appointments','middleware'=>['auth','verified']), function() {
+
+    Route::get('/calendar', [AppointmentController::class, 'calendar'])->name('appointment.calendar');
+
+    Route::post('/store', [AppointmentController::class, 'store'])->name('appointment.store');
+
+    Route::get('/{id}/edit', [AppointmentController::class, 'edit'])->name('appointment.edit');
+
+    Route::post('/{id}/update', [AppointmentController::class, 'update'])->name('appointment.update');
+
+    Route::delete('/{id}', [AppointmentController::class, 'destroy'])->name('appointment.destroy');
 
 });
 

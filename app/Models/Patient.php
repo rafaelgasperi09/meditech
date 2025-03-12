@@ -13,7 +13,7 @@ class Patient extends BaseModel
     // ESTE ES EL FILTRO GLOBAL POR TIPO DE ROL DE USUARIO
     protected static function booted()
     {
-        if(auth()->user()->hasRole('cliente') OR auth()->user()->hasRole('usuario')){
+        if(auth()->user() && (auth()->user()->hasRole('cliente') OR auth()->user()->hasRole('usuario'))){
             self::addGlobalScope('client_filter', function ($query){
                 $query->whereHas("clients",function ($q){
                     $q->whereIn('client_id',auth()->user()->clients()->pluck('client_id'));
