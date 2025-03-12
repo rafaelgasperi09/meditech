@@ -19,16 +19,12 @@ class DataTable extends Component
     public $search; // Búsqueda
     public $sortField = 'id'; // Ordenación por defecto
     public $sortDirection = 'asc'; // Dirección de orden
-
     public $pagination;
 
     public $count = 0;
-
-
-
     public $route_name;
 
-    public function mount($model, $columns,$pagination=10,$actions='',$routename='')
+    public function mount($model, $columns,$pagination=10,$sortField='id',$sortDirection='asc',$actions='',$routename='',)
     {
         $this->model = $model; // Convierte el string en una instancia de modelo
         $this->class = new $model;
@@ -36,14 +32,9 @@ class DataTable extends Component
         $this->pagination = $pagination;
         $this->actions = array_values($actions);
         $this->route_name = $routename;
+        $this->sortField =$sortField;
+        $this->sortDirection =$sortDirection;
     }
-
-    /*public function updatingSearch()
-    {
-        //$this->resetPage();
-
-        $this->render();
-    }*/
 
     public function sortBy($field)
     {
@@ -70,7 +61,9 @@ class DataTable extends Component
                 }
             });
         })
-        ->orderBy($this->sortField, $this->sortDirection)
+        ->when(Schema::hasColumn($this->class->getTable(),$this->sortField),function ($q){
+            $q->orderBy($this->sortField, $this->sortDirection);
+        })
         ->paginate($this->pagination);
 
         return view('livewire.data-table', [
