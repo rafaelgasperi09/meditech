@@ -18,6 +18,8 @@
                                          :columns="['id', 'full_name', 'birthdate','full_id_number','email','whatsapp','acciones']"
                                          :actions="['edit','delete']"
                                          routename="patient"
+                                         sortField="first_name"
+                                         sortDirecction="asc"
                                          wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
                 </div>
             </div>
