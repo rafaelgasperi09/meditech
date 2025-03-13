@@ -17,6 +17,7 @@ class UserAdminSeeder extends Seeder
             'first_name' => 'Administrados',
             'last_name'  => 'Del Sistema',
             'email' => 'rgasperi@smartcarebilling.com',
+            'password'=>'Prueba.1'
         ]);
 
 

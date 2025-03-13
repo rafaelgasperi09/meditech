@@ -3,7 +3,7 @@
         <script src="{{url('bower_components/moment/min/moment.min.js')}}"></script>
         <script src="{{url('bower_components/moment/locale/es.js')}}"></script>
         <script src="{{url('fullcalendar/dist/index.global.min.js')}}"></script>
-        <script src="{{url('fullcalendar/locale/es.js')}}"></script>
+        <script src="{{url('fullcalendar/locales/es.js')}}"></script>
     @stop
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight inline-block" >
@@ -23,22 +23,10 @@
             </div>
         </div>
     </div>
-    <style>
 
-        body {
-            margin: 40px 10px;
-            padding: 0;
-            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-            font-size: 14px;
-        }
-
-        #calendar {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-    </style>
     <script>
+
+
         document.addEventListener('DOMContentLoaded', function() {
 
             var calendarEl = document.getElementById('calendar');

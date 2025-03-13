@@ -94,12 +94,35 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @can('clientes')
+                <x-responsive-nav-link :href="route('client.index')" :active="request()->routeIs('clients')">
+                    {{ __('client.titles') }}
+                </x-responsive-nav-link>
+            @endcan
+            @can('pacientes')
+                <x-responsive-nav-link :href="route('patient.index')" :active="request()->routeIs('patients')">
+                    {{ __('patient.titles') }}
+                </x-responsive-nav-link>
+            @endcan
+            @can('usuarios')
+                <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('users')">
+                    {{ __('user.titles') }}
+                </x-responsive-nav-link>
+            @endcan
+            @can('agenda')
+                <x-responsive-nav-link :href="route('appointment.calendar')" :active="request()->routeIs('appointments/calendar')">
+                    {{ __('appointment.titles') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('consultation.create')" :active="request()->routeIs('consultation/create')">
+                    {{ __('Nueva Consulta') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-base text-gray-800">{{ Auth::user()->full_name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
 
