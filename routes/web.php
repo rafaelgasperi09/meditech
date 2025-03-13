@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AppointmentController;
+use \App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -89,5 +90,15 @@ Route::group(array('prefix' => 'appointments','middleware'=>['auth','verified'])
     Route::delete('/{id}', [AppointmentController::class, 'destroy'])->name('appointment.destroy');
 
 });
+
+Route::group(array('prefix' => 'api'), function() {
+
+    Route::get('/diagnostics', [ApiController::class, 'diagnostics'])->name('api.diagnostics');
+    Route::get('/cpts/{type}', [ApiController::class, 'cpts'])->name('api.cpts');
+    Route::get('/medical_speciality', [ApiController::class, 'medicalSpeciality'])->name('api.medical_speciality');
+    Route::get('/medicines', [ApiController::class, 'medicines'])->name('api.medicines');
+
+});
+
 
 require __DIR__.'/auth.php';

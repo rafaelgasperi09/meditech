@@ -9,7 +9,7 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <h1>{{$seccion}}</h1>
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg" style="min-height: 500px;">
 
                 <div class="p-6 text-gray-900">
 
@@ -23,6 +23,8 @@
                             <div class="selector-btn-type">
                                     <livewire:selector-item list_type="{{$i->list_type}}" :key="$i->id"/>
                             </div>
+                      @elseif($i->type=='api')
+                           <livewire:search-dropdown path="{{$i->api_path}}" :key="$i->id"/>
                       @endif
                       <x-input-error :messages="$errors->get($i->name)" class="mt-2" />
                    @endforeach
