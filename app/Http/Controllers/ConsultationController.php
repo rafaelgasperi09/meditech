@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ConsultationController extends Controller
 {
-    public function create(){
+    public function create(Request $request){
 
         $data=array();
         $consultation_template = ConsultationFieldTemplate::whereUserId(Auth::getUser()->id)->pluck('consultation_field_id');
@@ -22,6 +22,20 @@ class ConsultationController extends Controller
             $data[$d->section][$d->id] = $d;
         }
 
-        return view('consultations.create',compact('data'));
+        $client_id = auth()->user()->clients()->first()->id;
+        $consultationPre = Consultation::whereStatus('pre-consulta')->whereClientId($client_id)->first();
+        $consultationPreApp = Consultation::whereAppointmentId($request->appointment_id)->first();
+
+        if($request->has('appointment_id') && !$consultationPreApp){
+            $consultation =  Consultation::create(['client_id'=>$client_id,'appointment_id'=>$request->appointment_id,'status'=>'pre-consulta']);
+        }else if(!$request->has('appointment_id') && !$consultationPre){
+            $consultation =  Consultation::create(['client_id'=>$client_id,'status'=>'pre-consulta']);
+        }else if($consultationPre){
+            $consultation = $consultationPre;
+        }else if($consultationPreApp){
+            $consultation = $consultationPreApp;
+        }
+
+        return view('consultations.create',compact('data','consultation'));
     }
 }

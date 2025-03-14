@@ -6,10 +6,29 @@ use App\Models\Cpt;
 use App\Models\Diagnostic;
 use App\Models\MedicalSpeciality;
 use App\Models\Medicine;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
+    public function patients(Request $request){
+        $select='*';
+
+        if($request->has('dropdown'))
+            $select = "id,concat(first_name,' ',last_name)  as name";
+
+        $data = Patient::selectRaw($select)
+            ->when($request->has('q'),function ($q) use($request){
+                $q->whereRaw("(id_number LIKE '%".$request->q."%' or first_name LIKE '%".$request->q."%' or last_name LIKE '%".$request->q."%')");
+            })
+            ->take(10)
+            ->get();
+
+
+        return response()->json($data);
+
+    }
+
     public function diagnostics(Request $request){
         $select='*';
 

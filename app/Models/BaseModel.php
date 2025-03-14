@@ -22,7 +22,7 @@ class BaseModel extends Model
             // override some property like $model->something = transform($something);
             $changes = $model->isDirty() ? $model->getDirty() : false;
             $user_id = 1;
-            if(current_user()) $user_id = current_user()->id;
+            if(\auth()->check()) $user_id = auth()->user()->id;
             if(count($changes)>0)
             {
                 foreach($changes as $attr => $value)
