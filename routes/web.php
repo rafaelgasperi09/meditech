@@ -71,7 +71,7 @@ Route::group(array('prefix' => 'users','middleware'=>['auth','verified']), funct
 
     Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 
-    Route::post('/{id}/update', [UserController::class, 'update'])->name('user.update');
+    Route::PUT('/{id}/update', [UserController::class, 'update'])->name('user.update');
 
     Route::delete('/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 
