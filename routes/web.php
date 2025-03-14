@@ -97,6 +97,7 @@ Route::group(array('prefix' => 'api'), function() {
     Route::get('/cpts/{type}', [ApiController::class, 'cpts'])->name('api.cpts');
     Route::get('/medical_speciality', [ApiController::class, 'medicalSpeciality'])->name('api.medical_speciality');
     Route::get('/medicines', [ApiController::class, 'medicines'])->name('api.medicines');
+    Route::get('/patients', [ApiController::class, 'patients'])->name('api.patients');
 
 });
 
