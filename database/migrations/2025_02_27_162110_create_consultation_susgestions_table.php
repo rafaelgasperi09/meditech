@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('client_id')->nullable()->references('id')->on('clients')->nullable()->onDelete('cascade')->comment('Client Owner if type CLIENT');
             $table->foreignId('user_id')->nullable()->references('id')->on('users')->nullable()->onDelete('cascade')->comment('User Owner if type USER');
             $table->foreignId('consultation_field_id')->references('id')->on('consultation_fields')->onDelete('cascade');
-            $table->string('answser',700);
-            $table->string('answser_esp',700);
+            $table->string('answer',700);
+            $table->string('answer_esp',700);
             $table->boolean('active')->default(1);
             $table->softDeletes();
             $table->timestamps();

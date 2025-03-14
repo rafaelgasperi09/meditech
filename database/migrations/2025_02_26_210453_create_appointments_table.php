@@ -20,8 +20,8 @@ return new class extends Migration
             $table->foreignId('consulting_room_id')->references('id')->on('consulting_rooms')->onDelete('cascade');
             $table->foreignId('medical_specialty_id')->references('id')->on('medical_specialties')->onDelete('cascade');
             $table->string('status',35);
-            $table->timestamp('start_date');
-            $table->timestamp('end_date');
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->string('created_by_name',75)->nullable();
             $table->boolean('patient_arrived')->default(0);
             $table->boolean('patient_confirmation')->default(0);
