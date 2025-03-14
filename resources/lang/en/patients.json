@@ -1,0 +1,21 @@
+{
+    "id": "Id",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "id_type": "Id type",
+    "id_number": "Id number",
+    "birthdate": "Birthdate",
+    "gender": "Gender",
+    "physical_address": "Physical address",
+    "billing_address": "Billing address",
+    "phone": "Phone",
+    "whatsapp": "Whatsapp",
+    "email": "Email",
+    "status": "Status",
+    "retired": "Retired",
+    "blood_type": "Blood type",
+    "active": "Active",
+    "deleted_at": "Deleted at",
+    "created_at": "Created at",
+    "updated_at": "Updated at"
+}
