@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ConsultationSusgestion extends BaseModel
 {
-    protected $fillable=['type','section','client_id','user_id','consultation_field_if','anwser','anwser_esp','active'];
+    protected $fillable=['type','section','client_id','user_id','consultation_field_id','answer','answer_esp','active'];
 
     public function client(){
         return $this->belongsTo(Client::class);
