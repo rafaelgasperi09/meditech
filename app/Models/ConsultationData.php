@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ConsultationData extends BaseModel
 {
     protected $table='consultation_data';
+    protected $fillable=['consultation_id','consultation_field_id','user_id','value','record_id','table_name','model_name','diagnostic_id','note','qty'];
 
     public function consultation(){
         return $this->belongsTo(Consultation::class);

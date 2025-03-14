@@ -4,6 +4,19 @@
             {{ __('Nueva Consulta') }}
         </h2>
     </x-slot>
+    <div class="py-10">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <h1>Paciente</h1>
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg" style="min-height: 500px;">
+                <div class="p-6 text-gray-900">
+                    <livewire:search-dropdown path="{{route('api.patients')}}"
+                                              consultation_id="{{$consultation->id}}"
+                                              is_patient="true"
+                                              key="patient_name"/>
+                </div>
+            </div>
+        </div>
+    </div>
     @foreach($data as $seccion=>$inputs)
     <div class="py-10">
 
@@ -24,7 +37,10 @@
                                     <livewire:selector-item list_type="{{$i->list_type}}" :key="$i->id"/>
                             </div>
                       @elseif($i->type=='api')
-                           <livewire:search-dropdown path="{{$i->api_path}}" :key="$i->id"/>
+                           <livewire:search-dropdown path="{{$i->api_path}}"
+                                                     consultation_field_id="{{$i->id}}"
+                                                     consultation_id="{{$consultation->id}}"
+                                                     :key="$i->id"/>
                       @endif
                       <x-input-error :messages="$errors->get($i->name)" class="mt-2" />
                    @endforeach

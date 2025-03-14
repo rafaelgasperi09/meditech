@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('record_id')->nullable()->comment('Id of the table name asociated data');
             $table->string('table_name')->nullable()->comment('Table name of asociated record_id data');
             $table->string('model_name')->nullable()->comment('Model name of asociated record_id data');
-            $table->foreignId('diagnostic_id')->references('id')->on('diagnostics')->nullable()->onDelete('cascade')->comment('Diagnostic id if consultation_fields.need_diagnostic=1');
+            $table->foreignId('diagnostic_id')->nullable()->references('id')->on('diagnostics')->nullable()->onDelete('cascade')->comment('Diagnostic id if consultation_fields.need_diagnostic=1');
             $table->string('note',500)->nullable()->comment('Value if consultation_fields.ask_notes=1');
             $table->integer('qty')->nullable()->comment('Value if consultation_fields.ask_qty=1');
             $table->softDeletes();
