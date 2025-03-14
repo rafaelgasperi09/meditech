@@ -14,7 +14,7 @@
                         <!-- ID NUMBER -->
                         <div>
                             <x-input-label for="id_number" :value="__('patient.full_id_number')" />
-                            <x-select-input name="id_type" :options="\App\Models\Lista::documentType()" :selected="$data->id_type" class="block  inline-block"/>
+                            <x-select-input name="id_type" :options="\App\Models\Lista::documentType()" :selected="[$data->id_type]" class="block inline-block"/>
                             <x-text-input id="id_number" class="block  inline-block" type="number" name="id_number" :value="$data->id_number"/>
                             <x-input-error :messages="$errors->get('id_number')" class="mt-2" />
                         </div>
@@ -33,7 +33,7 @@
                         <!-- GENDER -->
                         <div>
                             <x-input-label for="gender" :value="__('patient.gender')" />
-                            <x-select-input name="gender" :options="\App\Models\Lista::gender()" :selected="$data->gender" class="block w-full"/>
+                            <x-select-input name="gender" :options="\App\Models\Lista::gender()" :selected="[$data->gender]" class="block w-full"/>
                             <x-input-error :messages="$errors->get('gender')" class="mt-2" />
                         </div>
                         <!-- BIRTHDATE -->
@@ -75,7 +75,7 @@
                         <!-- BLOOD TYPE -->
                         <div>
                             <x-input-label for="gender" :value="__('patient.blood_type')" />
-                            <x-select-input name="gender" :options="\App\Models\Lista::bloodTypes()" :selected="$data->blood_type" class="block w-full"/>
+                            <x-select-input name="gender" :options="\App\Models\Lista::bloodTypes()" :selected="[$data->blood_type]" class="block w-full"/>
                             <x-input-error :messages="$errors->get('gender')" class="mt-2" />
                         </div>
                         <div class="flex items-center justify-end mt-4">
