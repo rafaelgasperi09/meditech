@@ -78,6 +78,8 @@
     "user.email": "Correo electrónico",
     "user.email_verified_at": "Correo verificado el",
     "user.password": "Contraseña",
+    "user.new_password": "Nueva Contraseña",
+    "user.confirm_password": "Confirmar Contraseña",
     "user.profile_picture": "Foto de perfil",
     "user.remember_token": "Token de recuerdo",
     "user.created_at": "Creado el",

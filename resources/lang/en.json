@@ -78,6 +78,8 @@
     "user.email": "Email",
     "user.email_verified_at": "Email Verified At",
     "user.password": "Password",
+    "user.new_password": "New Password",
+    "user.confirm_password": "Confirm Password",
     "user.profile_picture": "Profile Picture",
     "user.remember_token": "Remember Token",
     "user.created_at": "Created At",
