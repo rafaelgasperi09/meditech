@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Appointment extends BaseModel
 {
     use HasFactory;
-
+    protected $guarded=['id'];
     // ESTE ES EL FILTRO GLOBAL POR TIPO DE ROL DE USUARIO
     protected static function booted()
     {
