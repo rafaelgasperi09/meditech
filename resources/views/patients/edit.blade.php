@@ -12,11 +12,16 @@
                     <form method="POST" action="{{ route('client.update',$data->id) }}">
                     @csrf
                         <!-- ID NUMBER -->
-                        <div>
-                            <x-input-label for="id_number" :value="__('patient.full_id_number')" />
-                            <x-select-input name="id_type" :options="\App\Models\Lista::documentType()" :selected="[$data->id_type]" class="block inline-block"/>
-                            <x-text-input id="id_number" class="block  inline-block" type="number" name="id_number" :value="$data->id_number"/>
-                            <x-input-error :messages="$errors->get('id_number')" class="mt-2" />
+                        <div class="flex items-center justify-start">
+                            <div class="d-flex flex-column">
+                                <x-input-label for="id_type" :value="__('patient.id_type')" />
+                                <x-select-input name="id_type" :options="\App\Models\Lista::documentType()" :selected="[$data->id_type]" class="block inline-block"/>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <x-input-label for="id_number" :value="__('patient.full_id_number')" />
+                                <x-text-input id="id_number" class="block  inline-block" type="number" name="id_number" :value="$data->id_number"/>
+                                <x-input-error :messages="$errors->get('id_number')" class="mt-2" />
+                            </div>
                         </div>
                         <!-- First Name -->
                         <div>

@@ -4,6 +4,7 @@
         <script src="{{url('bower_components/moment/locale/es.js')}}"></script>
         <script src="{{url('fullcalendar/dist/index.global.min.js')}}"></script>
         <script src="{{url('fullcalendar/locales/es.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     @stop
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight inline-block" >
