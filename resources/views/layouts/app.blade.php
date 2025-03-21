@@ -16,6 +16,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <script src="https://kit.fontawesome.com/652b8e06e9.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         @yield('scripts')
     </head>
     <body class="font-sans antialiased">
