@@ -1,10 +1,10 @@
 <div>
     <input type="text" wire:model.live="search" placeholder="Buscar..." class="p-2 border rounded" id="search">
-    <table class="w-full border-collapse border border-gray-300 mt-3">
+    <table class="w-full table-auto mt-3 ">
         <thead>
         <tr>
             @foreach ($columns as $column)
-                <th class="border p-2 cursor-pointer" wire:click="sortBy('{{ $column }}')">
+                <th class="border-b border-gray-300 p-2 cursor-pointer" wire:click="sortBy('{{ $column }}')">
                     {{ __($route_name.'.'.$column) }}
                     @if ($sortField === $column)
                         @if ($sortDirection === 'asc') ▲ @else ▼ @endif
@@ -15,9 +15,9 @@
         </thead>
         <tbody>
         @foreach ($data as $row)
-            <tr class="border">
+            <tr class="">
                 @foreach ($columns as $column)
-                    <td class="border p-2">
+                    <td class="border-b border-gray-100 p-2">
                         @if(App\Models\Helper::urlIsImage($row->$column))
                             <img src="{{$row->$columns}}">
                         @elseif($column=='acciones')
