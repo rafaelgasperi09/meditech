@@ -53,9 +53,9 @@
                         <x-input-error :messages="$errors->get('consulting_room_id')" class="mt-2" />
                     </div>
                     <div>
-                        <x-input-label for="medical_speciality_id" :value="__('Especialidad')" />
-                        <x-select-input name="medical_speciality_id" :options="\App\Models\MedicalSpeciality::pluck('name','id')->toArray()"  class="block w-full"/>
-                        <x-input-error :messages="$errors->get('medical_speciality_id')" class="mt-2" />
+                        <x-input-label for="medical_specialty_id" :value="__('Especialidad')" />
+                        <x-select-input name="medical_specialty_id" :options="\App\Models\MedicalSpeciality::pluck('name','id')->toArray()"  class="block w-full"/>
+                        <x-input-error :messages="$errors->get('medical_specialty_id')" class="mt-2" />
                     </div>
                 </div>
 

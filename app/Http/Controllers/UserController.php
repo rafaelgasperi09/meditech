@@ -40,7 +40,18 @@ class UserController extends Controller
     }
 
     public function update(Request $request,$id){
+        $statusModel = User::find($id);
+        $fields = $request->except('id');
+        if(empty($request->password))
+            unset($fields['password']);
+        $statusModel->fill($fields);
+        if($statusModel->save()){
+            session()->flash('message.suucess','Usuario actualizado con exito');
+        }else{
+            session()->flash('message.error','¡Error!, este usuario no se puede actualizar.');
+        }
 
+        return redirect(route('user.index'));
     }
 
     public function destroy($id){

@@ -63,7 +63,14 @@ class AppointmentController extends Controller
     }
 
     public function store(Request $request){
+        
+       $appointment= New Appointment();
+       $fields=$request->except('_token');
+       $appointment->fill($fields);
+       $appointment->status='P';
+       $appointment->save();
 
+       return redirect(route('consultation.create',['id'=>$appointment->id]));
     }
 
     public function edit($id){
