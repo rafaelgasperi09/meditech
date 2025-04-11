@@ -1,7 +1,7 @@
 <div class="relative w-64">
     <input
         type="text"
-        wire:model.live.debounce.1000ms="query"
+        wire:model.live="query"
         class="w-full border rounded p-2"
         placeholder="Buscar..."
     >

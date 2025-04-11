@@ -24,6 +24,7 @@ class SearchDropdown extends Component
         $this->consultation_field_id = $consultation_field_id;
         $this->consultation = Consultation::find($consultation_id);
         $this->consultation_field = ConsultationField::find($consultation_field_id);
+
         $this->is_patient=$is_patient;
     }
 

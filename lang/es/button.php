@@ -5,5 +5,6 @@ return [
     'register'=>'Registrar',
     'update'=>'Actualizar',
     'delete'=>'Eliminar',
-    'edit'=>'Editar'
+    'edit'=>'Editar',
+    'save'=>'Guardar'
 ];

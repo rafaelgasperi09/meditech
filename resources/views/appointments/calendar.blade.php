@@ -61,11 +61,11 @@
 
                 <div class="mt-6 flex justify-end">
                     <x-secondary-button x-on:click="$dispatch('close')">
-                        {{ __('Cancel') }}
+                        {{ __('button.cancel') }}
                     </x-secondary-button>
 
                     <x-primary-button class="ms-3">
-                        {{ __('Guardar') }}
+                        {{ __('button.save') }}
                     </x-primary-button>
                 </div>
             </form>
