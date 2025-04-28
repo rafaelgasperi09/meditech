@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     @include('layout.partials.head')
+
     @yield('css')
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,33 +20,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     @yield('scripts')
 </head>
-<body class="font-sans antialiased">
 @if (!Route::is(['error-404', 'error-500']))
-<body>
+
+    <body>
 @endif
 @if (Route::is(['error-404', 'error-500']))
- <body class="error-pages">
+
+    <body class="error-pages">
 @endif
 @if (!Route::is(['change-password2', 'confirm-mail','error-404','error-500','forgot-password','login','lock-screen','register']))
     <div class="main-wrapper">
-        @endif
-        @if (Route::is(['change-password2', 'confirm-mail','forgot-password','login','lock-screen','register']))
-            <div class="main-wrapper login-body">
-                @endif
-                @if(Route::is(['error-404','error-500']))
-                    <div class="main-wrapper error-wrapper">
-                        @endif
-                        @if (!Route::is(['change-password2', 'confirm-mail','forgot-password','login','lock-screen','register','error-404','error-500']))
-                            @include('layout.partials.header')
-                            @include('layout.partials.sidebar')
-                        @endif
-                      {{$slot}}
-                    </div>
-            </div>
-    </div>
-    @component('components.modal-popup')
-    @endcomponent
-    <div class="sidebar-overlay" data-reff=""></div>
-    @include('layout.partials.footer-scripts')
+@endif
+@if (Route::is(['change-password2', 'confirm-mail','forgot-password','login','lock-screen','register']))
+    <div class="main-wrapper login-body">
+@endif
+@if(Route::is(['error-404','error-500']))
+<div class="main-wrapper error-wrapper">
+    @endif
+    @if (!Route::is(['change-password2', 'confirm-mail','forgot-password','login','lock-screen','register','error-404','error-500']))
+        @include('layout.partials.header')
+        @include('layout.partials.sidebar')
+    @endif
+    @yield('content')
+</div>
+@component('components.modal-popup')
+@endcomponent
+<div class="sidebar-overlay" data-reff=""></div>
+@include('layout.partials.footer-scripts')
 </body>
+
 </html>

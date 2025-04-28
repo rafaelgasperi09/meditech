@@ -23,8 +23,9 @@ class DataTable extends Component
 
     public $count = 0;
     public $route_name;
+    public $title='';
 
-    public function mount($model, $columns,$pagination=10,$sortField='id',$sortDirection='asc',$actions='',$routename='',)
+    public function mount($model, $columns,$pagination=10,$sortField='id',$sortDirection='asc',$actions='',$routename='',$title='')
     {
         $this->model = $model; // Convierte el string en una instancia de modelo
         $this->class = new $model;
@@ -34,6 +35,7 @@ class DataTable extends Component
         $this->route_name = $routename;
         $this->sortField =$sortField;
         $this->sortDirection =$sortDirection;
+        $this->title=$title;
     }
 
     public function sortBy($field)

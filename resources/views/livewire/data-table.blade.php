@@ -1,6 +1,16 @@
 <div>
-    <input type="text" wire:model.live="search" placeholder="Buscar..." class="p-2 border rounded" id="search">
-    <table class="w-full table-auto mt-3 ">
+    <!-- Table Header -->
+    @component('components.table-header')
+        @slot('title')
+          {{$title}}
+        @endslot
+        @slot('li_1')
+            {{ route('patient.create') }}
+        @endslot
+    @endcomponent
+    <!-- /Table Header -->
+
+    <table class="table border-0 custom-table comman-table mb-0">
         <thead>
         <tr>
             @foreach ($columns as $column)
@@ -43,7 +53,8 @@
         </tbody>
     </table>
 
-    <div class="mt-3">
-        {{ $data->links() }}
+    <div class="mt-3" class="float-right">
+        {{ $data->links('pagination::bootstrap-5') }}
     </div>
+    <p>&nbsp;</p>
 </div>

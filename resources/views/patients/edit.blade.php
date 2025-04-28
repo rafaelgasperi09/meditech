@@ -1,16 +1,27 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight inline-block" >
-            {{ __('patient.titles') }}
-
-        </h2>
-    </x-slot>
-    <div class="py-10">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <form method="POST" action="{{ route('client.update',$data->id) }}">
-                    @csrf
+    <div class="page-wrapper">
+        <div class="content">
+            <!-- Page Header -->
+            @component('components.page-header')
+                @slot('title')
+                    {{ __('patient.title') }}
+                @endslot
+                @slot('li_1')
+                      {{ __('generic.edit') }} {{ __('patient.titles') }}
+                    @endslot
+            @endcomponent
+            <!-- /Page Header -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="form-heading">
+                                    <h4>  {{ __('generic.detail') }} {{ __('patient.title') }}</h4>
+                                </div>
+                            </div>
+                            <form method="POST" action="{{ route('client.update',$data->id) }}">
+                            @csrf
                         <!-- ID NUMBER -->
                         <div class="flex items-center justify-start">
                             <div class="d-flex flex-column">
@@ -84,15 +95,15 @@
                             <x-input-error :messages="$errors->get('gender')" class="mt-2" />
                         </div>
                         <div class="flex items-center justify-end mt-4">
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('client.index') }}">
-                                {{ __('button.cancel') }}
-                            </a>
-                            <x-primary-button class="ms-4">
-                                {{ __('button.update') }}
-                            </x-primary-button>
+                            <div class="doctor-submit text-end">
+                                <button type="submit" class="btn btn-primary submit-form me-2">  {{ __('button.update') }}</button>
+                                <button type="submit" class="btn btn-primary cancel-form">  {{ __('button.cancel') }}</button>
+                            </div>
                         </div>
 
                     </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
