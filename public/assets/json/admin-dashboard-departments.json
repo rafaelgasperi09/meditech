@@ -1,0 +1,27 @@
+[
+    {
+        "name": "General Physician",
+        "icon": "dep-icon-01.svg",
+        "percentage": "35%"
+    },
+    {
+        "name": "Dentist",
+        "icon": "dep-icon-02.svg",
+        "percentage": "24%"
+    },
+    {
+        "name": "ENT",
+        "icon": "dep-icon-03.svg",
+        "percentage": "10%"
+    },
+    {
+        "name": "Cardiologist",
+        "icon": "dep-icon-04.svg",
+        "percentage": "15%"
+    },
+    {
+        "name": "Opthomology",
+        "icon": "dep-icon-05.svg",
+        "percentage": "20%"
+    }
+]

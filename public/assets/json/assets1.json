@@ -1,0 +1,13 @@
+[
+    {
+        "id": "1",
+        "Image": "avatar-01.jpg",
+        "AssetId": "#AST-0001",
+        "AssetUser": "Andrea Lalema",
+        "AssetName": "Anaesthetic machine",
+        "PurchaseDate": "01.05.2023",
+        "Warrenty": "4 Years",
+        "WarrentyEnd": "04.08.2024",
+        "Amount": "$62480"
+    }
+]

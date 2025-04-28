@@ -1,0 +1,23 @@
+[
+    {
+        "Id": "1",
+        "TaxName": "VAT",
+        "TaxPercentage": "14%",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "2",
+        "TaxName": "GST",
+        "TaxPercentage": "30%",
+        "Class": "custom-badge status-pink",
+        "Status": "In Active"
+    },
+    {
+        "Id": "3",
+        "TaxName": "CGST",
+        "TaxPercentage": "40%",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    }
+]

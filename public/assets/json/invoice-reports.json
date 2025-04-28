@@ -1,0 +1,13 @@
+[
+	{
+		"Id": "1",
+		"Image":"avatar-01.jpg",
+		"InvoiceNumber": "#INV-0001",
+		"Client": "Andrea Lalema",
+		"CreatedDate": "04.10.2023",
+		"DueDate": "04.10.2023",
+		"Amount": "$1000",
+        "Class":"custom-badge status-green",
+		"Status": "Paid"
+	}
+]

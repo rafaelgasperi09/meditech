@@ -1,0 +1,82 @@
+[
+    {
+        "InvoiceNo": "IN093439#@09",
+        "Image": "avatar-04.jpg",
+        "Name": "Barbara Moore",
+        "Amount": "$1,54,220",
+        "DueDate": "23 Mar 2023",
+        "Status": "Paid",
+        "Class": "badge bg-success-dark",
+        "OverdueDays": ""
+    },
+    {
+        "InvoiceNo": "IN093439#@10",
+        "Image": "avatar-06.jpg",
+        "Name": "Karlene Chaidez",
+        "Amount": "$1,222",
+        "DueDate": "18 Mar 2023",
+        "Status": "Overdue",
+        "Class": "badge bg-danger-dark",
+        "OverdueDays": "Overdue 14 days"
+    },
+    {
+        "InvoiceNo": "IN093439#@11",
+        "Image": "avatar-08.jpg",
+        "Name": "Russell Copeland",
+        "Amount": "$3,470",
+        "DueDate": "10 Mar 2023",
+        "Status": "Cancelled",
+        "Class": "badge bg-secondary-dark",
+        "OverdueDays": ""
+    },
+    {
+        "InvoiceNo": "IN093439#@12",
+        "Image": "avatar-10.jpg",
+        "Name": "Joseph Collins",
+        "Amount": "$8,265",
+        "DueDate": "30 Mar 2023",
+        "Status": "Sent",
+        "Class": "badge bg-primary-dark",
+        "OverdueDays": ""
+    },
+    {
+        "InvoiceNo": "IN093439#@13",
+        "Image": "avatar-11.jpg",
+        "Name": "Jennifer Floyd",
+        "Amount": "$5,200",
+        "DueDate": "20 Mar 2023",
+        "Status": "Cancelled",
+        "Class": "badge bg-secondary-dark",
+        "OverdueDays": ""
+    },
+    {
+        "InvoiceNo": "IN093439#@14",
+        "Image": "avatar-09.jpg",
+        "Name": "Leatha Bailey",
+        "Amount": "$480",
+        "DueDate": "15 Mar 2023",
+        "Status": "Sent",
+        "Class": "badge bg-primary-dark",
+        "OverdueDays": ""
+    },
+    {
+        "InvoiceNo": "IN093439#@15",
+        "Image": "avatar-12.jpg",
+        "Name": "Alex Campbell",
+        "Amount": "$1,999",
+        "DueDate": "08 Mar 2023",
+        "Status": "Overdue",
+        "Class": "badge bg-danger-dark",
+        "OverdueDays": "Overdue 10 days"
+    },
+    {
+        "InvoiceNo": "IN093439#@16",
+        "Image": "avatar-03.jpg",
+        "Name": "Marie Canales",
+        "Amount": "$2,700",
+        "DueDate": "18 Mar 2023",
+        "Status": "Paid",
+        "Class": "badge bg-success-dark",
+        "OverdueDays": ""
+    }
+]

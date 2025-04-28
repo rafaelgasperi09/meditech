@@ -1,0 +1,79 @@
+[
+	{
+		"Id": "1",
+		"Image":"avatar-01.jpg",
+		"InvoiceNumber": "#INV-0004",
+		"Patient": "Andrea Lalema",
+		"PaymentType": "Credit Card",
+		"PaidDate": "01.10.2023",
+		"PaidAmount": "$2450",
+		"Class":"custom-badge status-green",
+        "Status": "Paid"
+	},
+	{
+		"Id": "2",
+		"Image":"avatar-02.jpg",
+		"InvoiceNumber": "#INV-0001",
+		"Patient": "Smith Bruklin",
+		"PaymentType": "Debit Card",
+		"PaidDate": "02.10.2023",
+		"PaidAmount": "$1505",
+		"Class":"custom-badge status-pink",
+        "Status": "Un Paid"
+	},
+	{
+		"Id": "3",
+		"Image":"avatar-03.jpg",
+		"InvoiceNumber": "#INV-0002",
+		"Patient": "Bernardo James",
+		"PaymentType": "Pay Pal",
+		"PaidDate": "01.10.2023",
+		"PaidAmount": "$2000",
+		"Class":"custom-badge status-green",
+        "Status": "Paid"
+	},
+	{
+		"Id": "4",
+		"Image":"avatar-04.jpg",
+		"InvoiceNumber": "#INV-0003",
+		"Patient": "Mark Hay Smith",
+		"PaymentType": "Credit Card",
+		"PaidDate": "05.10.2023",
+		"PaidAmount": "$1000",
+		"Class":"custom-badge status-orange",
+        "Status": "Patially Paid"
+	},
+	{
+		"Id": "5",
+		"Image":"avatar-05.jpg",
+		"InvoiceNumber": "#INV-0004",
+		"Patient": "Galaviz Lalema",
+		"PaymentType": "Debit Card",
+		"PaidDate": "01.10.2023",
+		"PaidAmount": "$2300",
+		"Class":"custom-badge status-green",
+        "Status": "Paid"
+	},
+	{
+		"Id": "6",
+		"Image":"avatar-06.jpg",
+		"InvoiceNumber": "#INV-0003",
+		"Patient": "Andrea Lalema",
+		"PaymentType": "Pay Pal",
+		"PaidDate": "05.10.2023",
+		"PaidAmount": "$4000",
+		"Class":"custom-badge status-orange",
+        "Status": "Patially Paid"
+	},
+	{
+		"Id": "7",
+		"Image":"avatar-07.jpg",
+		"InvoiceNumber": "#INV-0005",
+		"Patient": "William Stephin",
+		"PaymentType": "Pay Pal",
+		"PaidDate": "10.10.2023",
+		"PaidAmount": "$3000",
+		"Class":"custom-badge status-pink",
+        "Status": "Un Paid"
+	}
+]

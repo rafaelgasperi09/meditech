@@ -1,0 +1,30 @@
+[
+    {
+        "Imagesrc": "blog-7.jpg",
+        "Title": "Health",
+        "Date": "05 Sep 2023",
+        "Blog": "Hydration or Moisturization – What to do this Winter?",
+        "Next": "Read more in 10 Minutes"
+    },
+    {
+        "Imagesrc": "blog-8.jpg",
+        "Title": "Ophthalmology",
+        "Date": "05 Sep 2023",
+        "Blog": "Keep proper monitor distance and room lighting.",
+        "Next": "Read more in 5 Minutes"
+    },
+    {
+        "Imagesrc": "blog-9.jpg",
+        "Title": "Safety",
+        "Date": "05 Sep 2023",
+        "Blog": "Keep Hand Sanitizers Away from Young Children",
+        "Next": "Read more in 4 Minutes"
+    },
+    {
+        "Imagesrc": "blog-10.jpg",
+        "Title": "Ophthalmology",
+        "Date": "05 Sep 2023",
+        "Blog": "Hair Loss – Causes, Treatment and Preventions",
+        "Next": "Read more in 10 Minutes"
+    }
+]

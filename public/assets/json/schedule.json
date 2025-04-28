@@ -1,0 +1,82 @@
+[
+    {
+        "Id": "1",
+        "Image": "avatar-01.jpg",
+        "DoctorName": "Dr.Andrea Lalema",
+        "Department": "Cardiology",
+        "AvailableDays": "Mon - Sun",
+        "AvailableTime": "09:00 AM - 06:00 PM",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "2",
+        "Image": "avatar-02.jpg",
+        "DoctorName": "Dr.Smith Bruklin",
+        "Department": "Urology",
+        "AvailableDays": "Mon,Tue,Sat,Sun",
+        "AvailableTime": "09:00 AM - 04:00 PM",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "3",
+        "Image": "avatar-03.jpg",
+        "DoctorName": "Dr.William Stephin",
+        "Department": "Radiology",
+        "AvailableDays": "Mon,Fri",
+        "AvailableTime": "09:00 AM - 06:00 PM",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "4",
+        "Image": "avatar-04.jpg",
+        "DoctorName": "Dr.Bernardo James",
+        "Department": "Dentist",
+        "AvailableDays": "Mon - fri",
+        "AvailableTime": "010:00 AM - 05:00 PM",
+        "Class": "custom-badge status-pink",
+        "Status": "In Active"
+    },
+    {
+        "Id": "5",
+        "Image": "avatar-06.jpg",
+        "DoctorName": "Dr.Cristina Groves",
+        "Department": "Gynocolgy",
+        "AvailableDays": "Mon - Sun",
+        "AvailableTime": "09:00 AM - 06:00 PM",
+        "Class": "custom-badge status-pink",
+        "Status": "In Active"
+    },
+    {
+        "Id": "6",
+        "Image": "avatar-05.jpg",
+        "DoctorName": "Mark Hay Smith",
+        "Department": "Gynocolgy",
+        "AvailableDays": "Sat, Sun",
+        "AvailableTime": "09:00 AM - 12:00 PM",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "7",
+        "Image": "avatar-01.jpg",
+        "DoctorName": "Dr.Andrea Lalema",
+        "Department": "Otolaryngology",
+        "AvailableDays": "Mon - Sun",
+        "AvailableTime": "09:00 AM - 06:00 PM",
+        "Class": "custom-badge status-green",
+        "Status": "Active"
+    },
+    {
+        "Id": "8",
+        "Image": "avatar-02.jpg",
+        "DoctorName": "Dr.Smith Bruklin",
+        "Department": "Urology",
+        "AvailableDays": "Mon - wed",
+        "AvailableTime": "11:00 AM - 09:00 PM",
+        "Class": "custom-badge status-pink",
+        "Status": "In Active"
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "id": "1",
+        "Image": "avatar-02.jpg",
+        "No": "R00001",
+        "Patientname": "Andrea Lalema",
+        "Age": "21",
+        "DateofBirth": "07 January 2002",
+        "Diagnosis": "Heart attack",
+        "Class": "custom-badge status-green",
+        "Triage": "Non Urgent"
+    },
+    {
+        "id": "2",
+        "Image": "avatar-03.jpg",
+        "No": "R00002",
+        "Patientname": "Mark Hay Smith",
+        "Age": "23",
+        "DateofBirth": "06 January 2002",
+        "Diagnosis": "Jaundice",
+        "Class": "custom-badge status-pink",
+        "Triage": "Emergency"
+    },
+    {
+        "id": "3",
+        "Image": "avatar-04.jpg",
+        "No": "R00003",
+        "Patientname": "Cristina Groves",
+        "Age": "25",
+        "DateofBirth": "10 January 2002",
+        "Diagnosis": "Malaria",
+        "Class": "custom-badge status-gray",
+        "Triage": "Out Patient"
+    },
+    {
+        "id": "4",
+        "Image": "avatar-05.jpg",
+        "No": "R00004",
+        "Patientname": "Galaviz Lalema",
+        "Age": "21",
+        "DateofBirth": "09 January 2002",
+        "Diagnosis": "Typhoid",
+        "Class": "custom-badge status-orange",
+        "Triage": "Non Urgent"
+    }
+]

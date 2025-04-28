@@ -1,0 +1,90 @@
+[
+	{
+		"Id": "1",
+		"Image":"avatar-01.jpg",
+		"Name": "Andrea Lalema",
+		"Department": "Otolaryngology",
+		"Specialization": "Infertility",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "2",
+		"Image":"avatar-02.jpg",
+		"Name": "Smith Bruklin",
+		"Department": "Urology",
+		"Specialization": "Prostate",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "3",
+		"Image":"avatar-03.jpg",
+		"Name": "William Stephin",
+		"Department": "Radiology",
+		"Specialization": "Cancer",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "4",
+		"Image":"avatar-04.jpg",
+		"Name": "Bernardo James",
+		"Department": "Dentist",
+		"Specialization": "Prostate",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "5",
+		"Image":"avatar-06.jpg",
+		"Name": "Cristina Groves",
+		"Department": "Gynocolgy",
+		"Specialization": "Prostate",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "6",
+		"Image":"avatar-05.jpg",
+		"Name": "Mark Hay Smith",
+		"Department": "Gynocolgy",
+		"Specialization": "Prostate",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "7",
+		"Image":"avatar-01.jpg",
+		"Name": "Andrea Lalema",
+		"Department": "Otolaryngology",
+		"Specialization": "Infertility",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	},
+	{
+		"Id": "8",
+		"Image":"avatar-02.jpg",
+		"Name": "Smith Bruklin",
+		"Department": "Urology",
+		"Specialization": "Prostate",
+		"Degree": "MBBS, MS",
+		"Mobile": "+1 23 456890",
+		"Email": "example@email.com",
+		"JoiningDate": "01.10.2023"
+	}
+]

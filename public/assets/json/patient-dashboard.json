@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"Status": "Reschedule",
+		"Image":"avatar-02.jpg",
+		"Doctorname": "Dr.Jenny Smith",
+		"Diagnosis": "Dermotology",
+		"Date": "12.05.2023"
+	},
+	{
+		"id": "2",
+		"Status": "Reschedule",
+		"Image":"avatar-04.jpg",
+		"Doctorname": "Andrea Lalema",
+		"Diagnosis": "Dermotology",
+		"Date": "10.05.2023"
+	},
+	{
+		"id": "3",
+		"Status": "Reschedule",
+		"Image":"avatar-05.jpg",
+		"Doctorname": "Dr.William Stephin",
+		"Diagnosis": "Dermotology",
+		"Date": "12.05.2023"
+	}
+]

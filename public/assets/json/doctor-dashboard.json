@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Appointments",
+        "icon": "doctor-dash-01.svg",
+        "count": "30",
+        "total": "/85",
+        "class":"status-green",
+        "percentageChange": "+60%"
+    },
+    {
+        "title": "Consultations",
+        "icon": "doctor-dash-02.svg",
+        "count": "20",
+        "total": "/125",
+        "class":"status-pink",
+        "percentageChange": "-20%"
+    },
+    {
+        "title": "Operations",
+        "icon": "doctor-dash-03.svg",
+        "count": "12",
+        "total": "/30",
+        "class":"status-green",
+        "percentageChange": "+40%"
+    },
+    {
+        "title": "Earnings",
+        "icon": "doctor-dash-04.svg",
+        "count": "530",
+        "total":"",
+        "class":"status-green",
+        "percentageChange": "+50%"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "Image": "calendar.svg",
+        "type": "Appointments",
+        "count": 250,
+        "class":"passive-view",
+        "arrowclass": "feather-arrow-up-right me-1",
+        "change": "40%"
+    },
+    {
+        "Image": "profile-add.svg",
+        "type": "New Patients",
+        "count": 140,
+        "class":"passive-view",
+        "arrowclass": "feather-arrow-up-right me-1",
+        "change": "20%"
+    },
+    {
+        "Image": "scissor.svg",
+        "type": "Operations",
+        "count": 56,
+        "class":"negative-view",
+        "arrowclass": "feather-arrow-down-right me-1",
+        "change": "15%"
+    },
+    {
+        "Image": "empty-wallet.svg",
+        "type": "Earnings",
+        "count": "20,250",
+        "class":"passive-view",
+        "arrowclass": "feather-arrow-up-right me-1",
+        "change": "30%"
+    }
+]

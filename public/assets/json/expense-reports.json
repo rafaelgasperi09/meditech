@@ -1,0 +1,98 @@
+[
+    {
+        "Id": "1",
+        "Image": "avatar-01.jpg",
+        "Item": "Anaesthetic machine",
+        "PurchaseFrom": "Biomedical Equipment Inc",
+        "Purchaseby": "Andrea Lalema",
+        "Paidby": "Paypal",
+        "Date": "04.10.2023",
+        "Amount": "$1000",
+        "Class": "custom-badge status-green",
+        "Status": "Approved"
+    },
+    {
+        "Id": "2",
+        "Image": "avatar-03.jpg",
+        "Item": "Aspiration Pump",
+        "PurchaseFrom": "Medi Pro Service",
+        "Purchaseby": "William Stephin",
+        "Paidby": "Cheque",
+        "Date": "08.10.2023",
+        "Amount": "$2000",
+        "Class": "custom-badge status-pink",
+        "Status": "Rejected"
+    },
+    {
+        "Id": "3",
+        "Image": "avatar-02.jpg",
+        "Item": "Anaesthetic machine",
+        "PurchaseFrom": "Biomedical Equipment Inc",
+        "Purchaseby": "Smith Bruklin",
+        "Paidby": "Paypal",
+        "Date": "04.10.2023",
+        "Amount": "$1000",
+        "Class": "custom-badge status-orange",
+        "Status": "Pending"
+    },
+    {
+        "Id": "4",
+        "Image": "avatar-04.jpg",
+        "Item": "Anaesthetic machine",
+        "PurchaseFrom": "Biomedical Equipment Inc",
+        "Purchaseby": "Bernardo James",
+        "Paidby": "Paypal",
+        "Date": "04.10.2023",
+        "Amount": "$1000",
+        "Class": "custom-badge status-purple",
+        "Status": "New"
+    },
+    {
+        "Id": "5",
+        "Image": "avatar-06.jpg",
+        "Item": "Medical Expenses",
+        "PurchaseFrom": "Hi-life Medicals",
+        "Purchaseby": "Cristina Groves",
+        "Paidby": "Debit Card",
+        "Date": "03.10.2023",
+        "Amount": "$1600",
+        "Class": "custom-badge status-green",
+        "Status": "Approved"
+    },
+    {
+        "Id": "6",
+        "Image": "avatar-05.jpg",
+        "Item": "Anaesthetic machine",
+        "PurchaseFrom": "Biomedical Equipment Inc",
+        "Purchaseby": "Mark Hay Smith",
+        "Paidby": "Paypal",
+        "Date": "04.10.2023",
+        "Amount": "$1000",
+        "Class": "custom-badge status-green",
+        "Status": "Approved"
+    },
+    {
+        "Id": "7",
+        "Image": "avatar-01.jpg",
+        "Item": "Aspiration Pump",
+        "PurchaseFrom": "Medi Pro Service",
+        "Purchaseby": "Andrea Lalema",
+        "Paidby": "Cheque",
+        "Date": "06.10.2023",
+        "Amount": "$4000",
+        "Class": "custom-badge status-pink",
+        "Status": "Rejected"
+    },
+    {
+        "Id": "8",
+        "Image": "avatar-02.jpg",
+        "Item": "Medical Expenses",
+        "PurchaseFrom": "Hi-life Medicals",
+        "Purchaseby": "Smith Bruklin",
+        "Paidby": "Debit Card",
+        "Date": "04.10.2023",
+        "Amount": "$1000",
+        "Class": "custom-badge status-green",
+        "Status": "Approved"
+    }
+]

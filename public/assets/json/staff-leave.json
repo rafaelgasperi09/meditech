@@ -1,0 +1,98 @@
+[
+    {
+        "Id": "",
+        "Image": "avatar-01.jpg",
+        "Class": "custom-badge status-green",
+        "EmployeeName": "Andrea Lalema",
+        "LeaveType": "Medical Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Not Feeling well",
+        "Status": "Approved"
+    },
+    {
+        "Id": "2",
+        "Image": "avatar-02.jpg",
+        "Class": "custom-badge status-orange",
+        "EmployeeName": "Smith Bruklin",
+        "LeaveType": "Casual Leave",
+        "From": "04.10.2023",
+        "To": "06.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Going to Vacation",
+        "Status": "Pending"
+    },
+    {
+        "Id": "3",
+        "Image": "avatar-03.jpg",
+        "Class": "custom-badge status-pink",
+        "EmployeeName": "William Stephin",
+        "LeaveType": "Casual Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Family Function",
+        "Status": "Declined"
+    },
+    {
+        "Id": "4",
+        "Image": "avatar-04.jpg",
+        "Class": "custom-badge status-purple",
+        "EmployeeName": "Bernardo James",
+        "LeaveType": "Casual Leave",
+        "From": "08.10.2023",
+        "To": "10.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Going to Vacation",
+        "Status": "New"
+    },
+    {
+        "Id": "5",
+        "Image": "avatar-06.jpg",
+        "Class": "custom-badge status-green",
+        "EmployeeName": "Cristina Groves",
+        "LeaveType": "Medical Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Family Function",
+        "Status": "Approved"
+    },
+    {
+        "Id": "6",
+        "Image": "avatar-05.jpg",
+        "Class": "custom-badge status-green",
+        "EmployeeName": "Mark Hay Smith",
+        "LeaveType": "Medical Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Not Feeling well",
+        "Status": "Approved"
+    },
+    {
+        "Id": "7",
+        "Image": "avatar-01.jpg",
+        "Class": "custom-badge status-green",
+        "EmployeeName": "Andrea Lalema",
+        "LeaveType": "Medical Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Family Function",
+        "Status": "Approved"
+    },
+    {
+        "Id": "8",
+        "Image": "avatar-02.jpg",
+        "Class": "custom-badge status-green",
+        "EmployeeName": "Smith Bruklin",
+        "LeaveType": "Casual Leave",
+        "From": "02.10.2023",
+        "To": "04.10.2023",
+        "Noofdays": "2 Days",
+        "Reason": "Not Feeling well",
+        "Status": "Approved"
+    }
+]

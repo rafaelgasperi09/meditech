@@ -1,0 +1,82 @@
+[
+	{
+		"id": "1",
+		"Image":"avatar-01.jpg",
+		"Department": "Cardiology",
+		"DepartmentHead": "Dr.Andrea Lalema",
+		"Description": "Investigates and treats proble...",
+		"Date": "01.10.2023",
+		"Class":"custom-badge status-green",
+        "Status": "Active"
+	},
+	{
+		"id": "2",
+		"Image":"avatar-02.jpg",
+		"Department": "Urology",
+		"DepartmentHead": "Dr.Smith Bruklin",
+		"Description": "Investigates and treats proble...",
+		"Date": "01.10.2023",
+		"Class":"custom-badge status-green",
+        "Status": "Active"
+	},
+	{
+		"id": "3",
+		"Image":"avatar-03.jpg",
+		"Department": "Radiology",
+		"DepartmentHead": "Dr.William Stephin",
+		"Description": "Investigates and treats proble...",
+		"Date": "01.10.2023",
+		"Class":"custom-badge status-green",
+        "Status": "Active"
+	},
+	{
+		"id": "4",
+		"Image":"avatar-04.jpg",
+		"Department": "Dentist",
+		"DepartmentHead": "Dr.Bernardo James",
+		"Description": "Investigates and treats proble...",
+		"Date": "03.10.2023",
+		"Class":"custom-badge status-pink",
+        "Status": "In Active"
+	},
+	{
+		"id": "5",
+		"Image":"avatar-06.jpg",
+		"Department": "Gynocolgy",
+		"DepartmentHead": "Dr.Cristina Groves",
+		"Description": "Investigates and treats proble...",
+		"Date": "05.10.2023",
+		"Class":"custom-badge status-pink",
+        "Status": "In Active"
+	},
+	{
+		"id": "6",
+		"Image":"avatar-05.jpg",
+		"Department": "Gynocolgy",
+		"DepartmentHead": "Mark Hay Smith",
+		"Description": "Investigates and treats proble...",
+		"Date": "07.10.2023",
+		"Class":"custom-badge status-green",
+        "Status": "Active"
+	},
+	{
+		"id": "7",
+		"Image":"avatar-01.jpg",
+		"Department": "Otolaryngology",
+		"DepartmentHead": "Dr.Andrea Lalema",
+		"Description": "Investigates and treats proble...",
+		"Date": "10.10.2023",
+		"Class":"custom-badge status-green",
+        "Status": "Active"
+	},
+	{
+		"id": "8",
+		"Image":"avatar-02.jpg",
+		"Department": "Urology",
+		"DepartmentHead": "Dr.Smith Bruklin",
+		"Description": "Investigates and treats proble...",
+		"Date": "21.10.2023",
+		"Class":"custom-badge status-pink",
+        "Status": "In Active"
+	}
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "Image": "avatar-01.jpg",
+        "EmployeeID": "EID-001",
+        "EmployeeName": "Andrea Lalema",
+        "Email": "example@gmail.com",
+        "JoiningDate": "01.05.2023",
+        "Role": "Nurse",
+        "Salary": "$1000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "2",
+        "Image": "avatar-03.jpg",
+        "EmployeeID": "EID-002",
+        "EmployeeName": "William Stephin",
+        "Email": "example@gmail.com",
+        "JoiningDate": "03.05.2023",
+        "Role": "Accountant",
+        "Salary": "$2000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "3",
+        "Image": "avatar-02.jpg",
+        "EmployeeID": "EID-003",
+        "EmployeeName": "Smith Bruklin",
+        "Email": "example@gmail.com",
+        "JoiningDate": "04.05.2023",
+        "Role": "Pharmacist",
+        "Salary": "$1500",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "4",
+        "Image": "avatar-04.jpg",
+        "EmployeeID": "EID-004",
+        "EmployeeName": "Bernardo James",
+        "Email": "example@gmail.com",
+        "JoiningDate": "06.06.2023",
+        "Role": "Nurse",
+        "Salary": "$3000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "5",
+        "Image": "avatar-06.jpg",
+        "EmployeeID": "EID-005",
+        "EmployeeName": "Cristina Groves",
+        "Email": "example@gmail.com",
+        "JoiningDate": "13.05.2023",
+        "Role": "Accountant",
+        "Salary": "$5000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "6",
+        "Image": "avatar-05.jpg",
+        "EmployeeID": "EID-006",
+        "EmployeeName": "Mark Hay Smith",
+        "Email": "example@gmail.com",
+        "JoiningDate": "11.12.2023",
+        "Role": "Pharmacist",
+        "Salary": "$2000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "7",
+        "Image": "avatar-01.jpg",
+        "EmployeeID": "EID-007",
+        "EmployeeName": "Andrea Lalema",
+        "Email": "example@gmail.com",
+        "JoiningDate": "01.05.2023",
+        "Role": "Accountant",
+        "Salary": "$1000",
+        "Status": "Generate Slip"
+    },
+    {
+        "id": "8",
+        "Image": "avatar-02.jpg",
+        "EmployeeID": "EID-008",
+        "EmployeeName": "Smith Bruklin",
+        "Email": "example@gmail.com",
+        "JoiningDate": "01.05.2023",
+        "Role": "Nurse",
+        "Salary": "$2000",
+        "Status": "Generate Slip"
+    }
+]

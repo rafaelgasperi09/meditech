@@ -1,0 +1,58 @@
+[
+    {
+        "Id": "1",
+        "Title": "New Year",
+        "HolidayDate": "01.01.2023",
+        "Day": "Sunday",
+        "Description": "Common Holiday"
+    },
+    {
+        "Id": "2",
+        "Title": "Pongal",
+        "HolidayDate": "14.01.2023",
+        "Day": "Monday",
+        "Description": "Religious Holiday"
+    },
+    {
+        "Id": "3",
+        "Title": "Pongal Holiday",
+        "HolidayDate": "15.01.2023",
+        "Day": "Monday",
+        "Description": "Religious Holiday"
+    },
+    {
+        "Id": "4",
+        "Title": "Tamil New Year",
+        "HolidayDate": "14.04.2023",
+        "Day": "Tuesday",
+        "Description": "Religious Holiday"
+    },
+    {
+        "Id": "5",
+        "Title": "Good Friday",
+        "HolidayDate": "05.01.2023",
+        "Day": "Friday",
+        "Description": "Religious Holiday"
+    },
+    {
+        "Id": "6",
+        "Title": "May Day",
+        "HolidayDate": "15.01.2023",
+        "Day": "Wednesday",
+        "Description": "Common Holiday"
+    },
+    {
+        "Id": "7",
+        "Title": "Ramzan",
+        "HolidayDate": "10.08.2023",
+        "Day": "Monday",
+        "Description": "Religious Holiday"
+    },
+    {
+        "Id": "8",
+        "Title": "Independence day",
+        "HolidayDate": "26.01.2023",
+        "Day": "Friday",
+        "Description": "Common Holiday"
+    }
+]

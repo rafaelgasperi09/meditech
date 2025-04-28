@@ -1,0 +1,90 @@
+[
+	{
+		"Id": "1",
+		"Image":"avatar-01.jpg",
+		"Name": "Andrea Lalema",
+		"Designation": "Doctor",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "10%",
+		"OrganizationShare": "5%",
+		"Class":"custom-badge status-green",
+        "Status": "Approved"
+	},
+	{
+		"Id": "2",
+		"Image":"avatar-03.jpg",
+		"Name": "William Stephin",
+		"Designation": "Doctor",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "15%",
+		"OrganizationShare": "20%",
+		"Class":"custom-badge status-orange",
+        "Status": "Pending"
+	},
+	{
+		"Id": "3",
+		"Image":"avatar-02.jpg",
+		"Name": "Smith Bruklin",
+		"Designation": "Nurse",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "10%",
+		"OrganizationShare": "12%",
+		"Class":"custom-badge status-orange",
+        "Status": "Pending"
+	},
+	{
+		"Id": "4",
+		"Image":"avatar-04.jpg",
+		"Name": "Bernardo James",
+		"Designation": "Specialist",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "12%",
+		"OrganizationShare": "15%",
+		"Class":"custom-badge status-green",
+        "Status": "Approved"
+	},
+	{
+		"Id": "5",
+		"Image":"avatar-06.jpg",
+		"Name": "Cristina Groves",
+		"Designation": "Doctor",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "10%",
+		"OrganizationShare": "5%",
+		"Class":"custom-badge status-green",
+        "Status": "Approved"
+	},
+	{
+		"Id": "6",
+		"Image":"avatar-05.jpg",
+		"Name": "Mark Hay Smith",
+		"Designation": "Nurse",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "10%",
+		"OrganizationShare": "15%",
+		"Class":"custom-badge status-green",
+        "Status": "Approved"
+	},
+	{
+		"Id": "7",
+		"Image":"avatar-01.jpg",
+		"Name": "Andrea Lalema",
+		"Designation": "Doctor",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "10%",
+		"OrganizationShare": "5%",
+		"Class":"custom-badge status-orange",
+        "Status": "Pending"
+	},
+	{
+		"Id": "8",
+		"Image":"avatar-02.jpg",
+		"Name": "Smith Bruklin",
+		"Designation": "Nurse",
+		"ProvidentFundType": "Basic Salary",
+		"EmployeeShare": "15%",
+		"OrganizationShare": "15%",
+		"Class":"custom-badge status-green",
+        "Status": "Approved"
+	}
+]

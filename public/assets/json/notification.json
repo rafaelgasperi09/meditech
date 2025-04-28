@@ -1,0 +1,93 @@
+[
+    {
+        "Avatar": "R",
+        "Name": "Richard Miles",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "J",
+        "Name": "John Doe",
+        "Time": "1 Aug",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item new-message"
+    },
+    {
+        "Avatar": "T",
+        "Name": "Tarah Shropshire",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "M",
+        "Name": "Mike Litorus",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "C",
+        "Name": "Catherine Manseau",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "D",
+        "Name": "Domenic Houston",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "B",
+        "Name": "Buster Wigton",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "R",
+        "Name": "Rolland Webber",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "C",
+        "Name": "Claire Mapes",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "M",
+        "Name": "Melita Faucher",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "J",
+        "Name": "Jeffery Lalor",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "L",
+        "Name": "Loren Gatlin",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    },
+    {
+        "Avatar": "T",
+        "Name": "Tarah Shropshire",
+        "Time": "12:28 AM",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+        "Class": "list-item"
+    }
+]

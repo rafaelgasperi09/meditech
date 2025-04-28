@@ -1,0 +1,26 @@
+[
+    {
+        "Description": "Dell Laptop",
+        "Category": "Laptop",
+        "Rate/Item": "$1,110",
+        "Quantity": "2",
+        "Discount": "2%",
+        "Amount": "$400"
+    },
+    {
+        "Description": "HP Laptop",
+        "Category": "Laptop",
+        "Rate/Item": "$1,500",
+        "Quantity": "3",
+        "Discount": "6%",
+        "Amount": "$3,000"
+    },
+    {
+        "Description": "Apple Ipad",
+        "Category": "Ipad",
+        "Rate/Item": "$11,500",
+        "Quantity": "1",
+        "Discount": "10%",
+        "Amount": "$11,000"
+    }
+]

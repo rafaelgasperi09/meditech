@@ -1,0 +1,62 @@
+[
+    {
+        "Invoicenumber": "IN093439#@09",
+        "Createdon": "16 Mar 2023",
+        "Invoiceto": "Barbara Moore",
+        "Amount": "$1,54,220",
+        "Lastinvoice": "23 Mar 2023",
+        "Nextinvoice": "28 Mar 2023",
+        "Frequency": "14 Months",
+        "Status": "Active",
+        "Class":"badge bg-success-dark",
+        "Image": "avatar-04.jpg"
+    },
+    {
+        "Invoicenumber": "IN093439#@10",
+        "Createdon": "14 Mar 2023",
+        "Invoiceto": "Karlene Chaidez",
+        "Amount": "$1,222",
+        "Lastinvoice": "18 Mar 2023",
+        "Nextinvoice": "20 Mar 2023",
+        "Frequency": "12 Months",
+        "Status": "Expired",
+        "Class":"badge bg-danger-dark",
+        "Image": "avatar-06.jpg"
+    },
+    {
+        "Invoicenumber": "IN093439#@11",
+        "Createdon": "7 Mar 2023",
+        "Invoiceto": "Russell Copeland",
+        "Amount": "$3,470",
+        "Lastinvoice": "10 Mar 2023",
+        "Nextinvoice": "18 Mar 2023",
+        "Frequency": "08 Months",
+        "Status": "Active",
+        "Class":"badge bg-success-dark",
+        "Image": "avatar-08.jpg"
+    },
+    {
+        "Invoicenumber": "IN093439#@12",
+        "Createdon": "24 Mar 2023",
+        "Invoiceto": "Joseph Collins",
+        "Amount": "$8,265",
+        "Lastinvoice": "15 Mar 2023",
+        "Nextinvoice": "22 Mar 2023",
+        "Frequency": "10 Months",
+        "Status": "Expired",
+        "Class":"badge bg-danger-dark",
+        "Image": "avatar-10.jpg"
+    },
+    {
+        "Invoicenumber": "IN093439#@13",
+        "Createdon": "17 Mar 2023",
+        "Invoiceto": "Jennifer Floyd",
+        "Amount": "$5,200",
+        "Lastinvoice": "20 Mar 2023",
+        "Nextinvoice": "31 Mar 2023",
+        "Frequency": "03 Months",
+        "Status": "Active",
+        "Class":"badge bg-success-dark",
+        "Image": "avatar-11.jpg"
+    }
+]

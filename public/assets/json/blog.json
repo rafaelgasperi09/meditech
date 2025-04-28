@@ -1,0 +1,80 @@
+[
+    {
+        "Imagesrc": "blog-1.jpg",
+        "Title": "Diabetes",
+        "Chat": "58",
+        "View": "500",
+        "Avatar": "avatar-01.jpg",
+        "Name": "Jenifer Robinson",
+        "Work": "M.B.B.S, Diabetologist",
+        "Date": "05 Sep 2023",
+        "Blog": "Simple Changes That Lowered My Mom's Blood Pressure",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 8 Minutes"
+    },
+    {
+        "Imagesrc": "blog-2.jpg",
+        "Title": "Safety",
+        "Chat": "18",
+        "View": "5k",
+        "Avatar": "avatar-02.jpg",
+        "Name": "Mark hay smith",
+        "Work": "M.B.B.S, Neurologist",
+        "Date": "05 Sep 2023",
+        "Blog": "Vaccines Are Close - But Right Now We Need to Hunker Down",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 2 Minutes"
+    },
+    {
+        "Imagesrc": "blog-3.jpg",
+        "Title": "Dermotology",
+        "Chat": "28",
+        "View": "2.5k",
+        "Avatar": "avatar-03.jpg",
+        "Name": "Denise Stevens",
+        "Work": "M.B.B.S, Dermotologist",
+        "Date": "05 Sep 2023",
+        "Blog": "Hair Loss On One Side of Head – Causes & Treatments",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 3 Minutes"
+    },
+    {
+        "Imagesrc": "blog-4.jpg",
+        "Title": "Ophthalmology",
+        "Chat": "48",
+        "View": "600",
+        "Avatar": "avatar-05.jpg",
+        "Name": "Laura Williams",
+        "Work": "M.B.B.S, Ophthalmologist",
+        "Date": "05 Sep 2023",
+        "Blog": "Eye Care Routine To Get Rid Of Under Eye Circles And Puffiness",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 5 Minutes"
+    },
+    {
+        "Imagesrc": "blog-5.jpg",
+        "Title": "Dentist",
+        "Chat": "48",
+        "View": "600",
+        "Avatar": "avatar-06.jpg",
+        "Name": "Linda Carpenter",
+        "Work": "M.B.B.S, Dentist",
+        "Date": "05 Sep 2023",
+        "Blog": "5 Facts About Teeth Whitening You Should Know",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 3 Minutes"
+    },
+    {
+        "Imagesrc": "blog-6.jpg",
+        "Title": "Gynecologist",
+        "Chat": "18",
+        "View": "300",
+        "Avatar": "avatar-04.jpg",
+        "Name": "Mark hay smith",
+        "Work": "M.B.B.S, Gynecologist",
+        "Date": "05 Sep 2023",
+        "Blog": "Sciatica: Symptoms, Causes & Treatments",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+        "Next": "Read more in 10 Minutes"
+    }
+]
