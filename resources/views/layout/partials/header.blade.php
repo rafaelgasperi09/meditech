@@ -1,8 +1,7 @@
 <div class="header">
     <div class="header-left">
         <a href="{{ url('/') }}" class="logo">
-            <img src="{{ URL::asset('/assets/img/logo.png') }}" width="35" height="35" alt=""> <span>Pre
-                Clinic</span>
+            <img src="{{ URL::asset('/assets/img/logo.png') }}" width="35" height="35" alt=""> <span>Pre  Clinic</span>
         </a>
     </div>
     <a id="toggle_btn" href="javascript:void(0);"><img src="{{ URL::asset('/assets/img/icons/bar-icon.svg') }}"
@@ -124,13 +123,11 @@
             </div>
         </li>
         <li class="nav-item ">
-            <a href="{{ url('settings') }}" class="hasnotifications nav-link"><img
-                    src="{{ URL::asset('/assets/img/icons/setting-icon-01.svg') }}" alt=""> </a>
+            <a href="{{ url('settings') }}" class="hasnotifications nav-link"><img   src="{{ URL::asset('/assets/img/icons/setting-icon-01.svg') }}" alt=""> </a>
         </li>
     </ul>
     <div class="dropdown mobile-user-menu float-end">
-        <a href="javascript:;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i
-                class="fa-solid fa-ellipsis-vertical"></i></a>
+        <a href="javascript:;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         <div class="dropdown-menu dropdown-menu-end">
             <a class="dropdown-item" href="{{ url('profile') }}">My Profile</a>
             <a class="dropdown-item" href="{{ url('edit-profile') }}">Edit Profile</a>

@@ -222,9 +222,11 @@
                         <a href="{{ url('expense-report') }}">{{ $title }} </a>
                     @endif
                 </li>
-                <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                <li class="breadcrumb-item"><i class="fa fa-chevron-right"></i></li>
                 <li class="breadcrumb-item active">{{ $li_1 }}</li>
             </ul>
+            <p>&nbsp;</p>
+            @include('partials.message')
         </div>
     </div>
 </div>
