@@ -108,11 +108,16 @@
         <li class="nav-item dropdown has-arrow user-profile-list">
             <a href="javascript:;" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
                 <div class="user-names">
-                    <h5>Liam Michael </h5>
-                    <span>Admin</span>
+                    <h5>{{auth()->user()->full_name}}</h5>
+                    <span>{{auth()->user()->roles()->first()->name}}</span>
                 </div>
                 <span class="user-img">
-                    <img src="{{ URL::asset('/assets/img/user-06.jpg') }}" alt="Admin">
+                    @if(!empty(auth()->user()->profile_picture))
+                        <img src="{{ url('storage/'.auth()->user()->profile_picture) }}" alt="{{auth()->user()->roles()->first()->name}}"></span>
+                    @else
+                        <img src="{{ URL::asset('/assets/img/user-06.jpg') }}" alt="{{auth()->user()->roles()->first()->name}}">
+                    @endif
+
                 </span>
             </a>
             <div class="dropdown-menu">

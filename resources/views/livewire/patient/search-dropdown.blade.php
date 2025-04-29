@@ -1,5 +1,10 @@
 <div class="relative w-64">
-    <input type="text"  wire:model.live="query"   class="form-control" placeholder="Buscar..." >
+    <input
+        type="text"
+        wire:model.live="query"
+        class="form-control"
+        placeholder="Buscar..."
+    >
 
     <!-- Spinner de Carga -->
     <div wire:loading class="absolute right-2 top-2">

@@ -14,7 +14,7 @@
         <thead>
         <tr>
             @foreach ($columns as $column)
-                <th class="border-b border-gray-300 p-2 cursor-pointer" wire:click="sortBy('{{ $column }}')">
+                <th class="border-b border-gray-300 p-2 cursor-pointer @if($column=='acciones') text-end @endif" wire:click="sortBy('{{ $column }}')">
                     {{ __($route_name.'.'.$column) }}
                     @if ($sortField === $column)
                         @if ($sortDirection === 'asc') ▲ @else ▼ @endif
@@ -27,7 +27,7 @@
         @foreach ($data as $row)
             <tr class="">
                 @foreach ($columns as $column)
-                    <td class="border-b border-gray-100 p-2 @if($column=='acciones')  class="text-end"@endif" >
+                    <td class="border-b border-gray-100 p-2 @if($column=='acciones') text-end @endif" >
                         @if(App\Models\Helper::urlIsImage($row->$column))
                             <img src="{{$row->$columns}}">
                         @elseif($column=='acciones')

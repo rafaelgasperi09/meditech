@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ClientController;
+use \App\Http\Controllers\BranchController;
+use \App\Http\Controllers\RoomController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AppointmentController;
@@ -47,6 +49,32 @@ Route::group(array('prefix' => 'clients','middleware'=>['auth','verified']), fun
 
     Route::delete('/{id}/delete', [ClientController::class, 'destroy'])->name('client.destroy');
 
+    Route::group(array('prefix' => 'branch','middleware'=>['auth','verified']), function() {
+
+        Route::get('/create', [BranchController::class, 'create'])->name('client.branch.create');
+
+        Route::post('/store', [BranchController::class, 'store'])->name('client.branch.store');
+
+        Route::get('/{id}/edit', [BranchController::class, 'edit'])->name('client.branch.edit');
+
+        Route::post('/{id}/update', [BranchController::class, 'update'])->name('client.branch.update');
+
+        Route::delete('/{id}/delete', [BranchController::class, 'destroy'])->name('client.branch.destroy');
+    });
+
+    Route::group(array('prefix' => 'consulting_rooms','middleware'=>['auth','verified']), function() {
+
+        Route::get('/create', [RoomController::class, 'create'])->name('client.room.create');
+
+        Route::post('/store', [RoomController::class, 'store'])->name('client.room.store');
+
+        Route::get('/{id}/edit', [RoomController::class, 'edit'])->name('client.room.edit');
+
+        Route::post('/{id}/update', [RoomController::class, 'update'])->name('client.room.update');
+
+        Route::delete('/{id}/delete', [RoomController::class, 'destroy'])->name('client.room.destroy');
+    });
+
 });
 
 Route::group(array('prefix' => 'patients','middleware'=>['auth','verified']), function() {
@@ -56,6 +84,8 @@ Route::group(array('prefix' => 'patients','middleware'=>['auth','verified']), fu
     Route::get('/create', [PatientController::class, 'create'])->name('patient.create');
 
     Route::post('/store', [PatientController::class, 'store'])->name('patient.store');
+
+    Route::get('/{id}/profile', [PatientController::class, 'profile'])->name('patient.profile');
 
     Route::get('/{id}/edit', [PatientController::class, 'edit'])->name('patient.edit');
 
@@ -75,7 +105,7 @@ Route::group(array('prefix' => 'users','middleware'=>['auth','verified']), funct
 
     Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 
-    Route::PUT('/{id}/update', [UserController::class, 'update'])->name('user.update');
+    Route::post('/{id}/update', [UserController::class, 'update'])->name('user.update');
 
     Route::delete('/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 
@@ -83,7 +113,11 @@ Route::group(array('prefix' => 'users','middleware'=>['auth','verified']), funct
 
 Route::group(array('prefix' => 'appointments','middleware'=>['auth','verified']), function() {
 
+    Route::get('/', [AppointmentController::class, 'index'])->name('appointment.index');
+
     Route::get('/calendar', [AppointmentController::class, 'calendar'])->name('appointment.calendar');
+
+    Route::get('/create', [AppointmentController::class, 'create'])->name('appointment.create');
 
     Route::post('/store', [AppointmentController::class, 'store'])->name('appointment.store');
 
@@ -102,6 +136,7 @@ Route::group(array('prefix' => 'api'), function() {
     Route::get('/medical_speciality', [ApiController::class, 'medicalSpeciality'])->name('api.medical_speciality');
     Route::get('/medicines', [ApiController::class, 'medicines'])->name('api.medicines');
     Route::get('/patients', [ApiController::class, 'patients'])->name('api.patients');
+    Route::get('/users', [ApiController::class, 'users'])->name('api.users');
 
 });
 

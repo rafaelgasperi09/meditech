@@ -51,7 +51,7 @@ class Patient extends BaseModel
         if($this->avatar()) $path = url('storage/'.$this->avatar()->path);
 
         return '<div class="profile-image">
-                  <a href="'.url('patient/'.$this->id.'/pofile').'" >
+                  <a href="'.route('patient.profile',$this->id).'" >
                                         <img width="28" height="28" src="'.$path.'" class="rounded-circle m-r-5" alt="" style="display:inline-block;">
                                         '.$this->first_name.' '.$this->last_name.'
                                     </a>

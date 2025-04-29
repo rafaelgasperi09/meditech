@@ -4,10 +4,10 @@
             <!-- Page Header -->
             @component('components.page-header')
                 @slot('title')
-                    {{ __('user.titles') }}
+                    {{ __('appointment.titles') }}
                 @endslot
                 @slot('li_1')
-                        {{ __('generic.list') }} {{ __('user.titles') }}
+                    {{ __('generic.list') }} {{ __('appointment.titles') }}
                 @endslot
             @endcomponent
             <!-- /Page Header -->
@@ -17,16 +17,21 @@
                     <div class="card card-table show-entire p-0 table-dash">
                         <div class="card-body">
                             <div class="table-responsive">
-                            <livewire:data-table model="{{$model}}"
-                                                 :columns="['id', 'profile_name', 'email','acciones']"
-                                                 :actions="['edit','delete']"
-                                                 routename="user"
-                                                 wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
+                                <livewire:appointment.data-table model="{{$model}}"
+                                                     routename="appointment"
+                                                     sortField="first_name"
+                                                     sortDirecction="asc"
+                                                     title="{{ __('generic.list') }} {{ __('appointment.titles') }}"
+                                                     wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @component('components.notification-box')
+        @endcomponent
     </div>
+
+
 </x-app-layout>

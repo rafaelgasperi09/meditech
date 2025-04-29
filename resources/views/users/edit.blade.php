@@ -73,8 +73,18 @@
                                         <label class="local-top">Avatar <span class="login-danger">*</span></label>
                                         <div class="settings-btn upload-files-avator">
                                             <input type="file" accept="image/*" name="avatar" id="file"    onchange="loadFile(event)" class="hide-input">
-                                            <label for="file" class="upload">Buscar Archivo</label>
+                                            <label for="file" class="upload">{{__('generic.Choose File')}}</label>
                                         </div>
+                                    </div>
+                                    <div class="upload-images upload-size">
+                                        @if(!empty($data->profile_picture))
+                                            <img src="{{ url('storage/'.$data->profile_picture) }}" alt="Image" id="preview">
+                                        @else
+                                            <img src="{{ URL::asset('/assets/img/favicon.png')  }}" alt="Image" id="preview">
+                                        @endif
+                                        <a href="javascript:void(0);" class="btn-icon logo-hide-btn">
+                                            <i class="feather-x-circle"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div><p>&nbsp;</p><p>&nbsp;</p>

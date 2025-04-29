@@ -1,6 +1,6 @@
 @props(['options' => [], 'selected' => null, 'name'])
 
-<select name="{{ $name }}" {{ $attributes->merge(['class' => 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 rounded-md shadow-sm']) }}>
+<select name="{{ $name }}" {{ $attributes->merge(['class' => 'form-control']) }}>
     <option value="">Seleccione</option>
     @foreach ($options as $value => $label)
         <option value="{{ $value }}" {{ in_array($value,$selected) ? 'selected' : '' }}>{{ $label }}</option>

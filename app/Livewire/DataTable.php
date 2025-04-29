@@ -54,7 +54,7 @@ class DataTable extends Component
         ->when($this->search, function (Builder $query) {
             $query->where(function ($q) { // Asegura que las condiciones sean correctas
                 foreach ($this->columns as $column) {
-                    if($column=='full_name')
+                    if($column=='full_name' or $column='profile_name')
                         $q->orWhereRaw("first_name like '%" . $this->search . "%' or last_name like '%" . $this->search . "%'");
 
                     if(Schema::hasColumn($this->class->getTable(),$column))

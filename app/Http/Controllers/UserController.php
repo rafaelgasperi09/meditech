@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Models\User;
 use App\Models\UserClient;
+use App\Services\FileService;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -40,18 +41,25 @@ class UserController extends Controller
     }
 
     public function update(Request $request,$id){
-        $statusModel = User::find($id);
+        $user = User::find($id);
         $fields = $request->except('id');
         if(empty($request->password))
             unset($fields['password']);
-        $statusModel->fill($fields);
-        if($statusModel->save()){
-            session()->flash('message.suucess','Usuario actualizado con exito');
-        }else{
-            session()->flash('message.error','¡Error!, este usuario no se puede actualizar.');
+        $user->fill($fields);
+
+        if($request->file('avatar')){
+            $service = new FileService();
+            $filename = 'profile_picture_'.$user->id;
+            $user->profile_picture = $service->uploadSingleFile($request->file('avatar'),'users',$filename);
         }
 
-        return redirect(route('user.index'));
+        if($user->save()){
+            $request->session()->flash('message.suucess','Actualizado con exito');
+        }else{
+            $request->session()->flash('message.error','¡Error!, este usuario no se puede actualizar.');
+        }
+
+        return redirect(route('user.edit',$id));
     }
 
     public function destroy($id){

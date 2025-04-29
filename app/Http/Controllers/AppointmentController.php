@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class AppointmentController extends Controller
 {
+
+    public function index(Request $request){
+
+        $model = Appointment::class;
+
+        return view('appointments.index',compact('model'));
+    }
+
     public function calendar(Request $request){
 
         $patient_id = $request->patient_id;
@@ -58,12 +66,8 @@ class AppointmentController extends Controller
         return view('appointments.calendar',compact('data','desde','hasta'));
     }
 
-    public function index(){
-        return view('clients.create');
-    }
-
     public function create(){
-        return view('clients.create');
+        return view('appointments.create');
     }
 
     public function store(Request $request){

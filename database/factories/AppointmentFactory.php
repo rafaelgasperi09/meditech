@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Appointment;
+use App\Models\AppointmentType;
 use App\Models\Branch;
 use App\Models\Client;
 use App\Models\ConsultingRoom;
@@ -30,12 +31,14 @@ class AppointmentFactory extends Factory
         $hour = fake()->randomElement([8,9,10,11,12,13,14,15,16,17,18,19,20]).":00:00";
         $start_date = Carbon::parse($day.' '.$hour)->format('Y-m-d H:i:s');
         $end_date = Carbon::parse($start_date)->addMinutes(fake()->randomElement([15,30,45,60]))->format('Y-m-d H:i:s');
+        $type = AppointmentType::inRandomOrder()->take(1)->first();
 
         return [
            'start_date'=>$start_date,
            'end_date'=>$end_date,
            'client_id'=>$client->id,
-           'status'=>'programada'
+           'status'=>'programada',
+            'appointment_type_id'=>$type->id
         ];
     }
 
