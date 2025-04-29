@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Patient;
+use App\Services\FileService;
 use Illuminate\Http\Request;
 
 class PatientController extends Controller
@@ -30,6 +31,25 @@ class PatientController extends Controller
 
     public function update(Request $request,$id){
 
+        $model = Patient::find($id);
+        $model->fill($request->all());
+
+        if($model->save()){
+
+
+            if($request->file('image')){
+                $service = new FileService();
+                $data['record_id'] = $model->id;
+                $data['folder'] = 'patients';
+                $data['type']='avatar';
+                $service->guardarArchivos([$request->file('image')],$data);
+            }
+            $request->session()->flash('message.success','Actualización co exito.');
+        }else{
+            $request->session()->flash('message.success','Hubo un error y no se pudo actualizar.');
+        }
+
+        return redirect(route('patient.edit',array($id)));
     }
 
     public function destroy($id){

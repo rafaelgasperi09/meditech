@@ -19,7 +19,7 @@
                         <div class="card-body">
 
                     <livewire:data-table model="{{$model}}"
-                                         :columns="['id', 'name', 'ruc','dv','email','whatsapp','acciones']"
+                                         :columns="['id', 'profile_name', 'ruc','dv','email','whatsapp','acciones']"
                                          :actions="['edit','delete']"
                                          routename="client"
                                          wire:key="{{\Illuminate\Support\Str::random(5)}}"/>

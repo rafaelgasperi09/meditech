@@ -12,4 +12,7 @@ return [
     'whatsapp'=>'Whatsapp',
     'acciones'=>'Acciones',
     'logo'=>'Logo',
+    'branch'=>'Sucursal',
+    'room'=>'Consultorio',
+    'profile_name'=>'Nombre'
 ];

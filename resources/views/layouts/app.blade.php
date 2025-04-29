@@ -6,20 +6,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     @include('layout.partials.head')
     @yield('css')
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     <script src="https://kit.fontawesome.com/652b8e06e9.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     @yield('scripts')
 </head>
-<body class="font-sans antialiased">
+<body class="">
 @if (!Route::is(['error-404', 'error-500']))
 <body>
 @endif
@@ -43,8 +41,7 @@
                     </div>
             </div>
     </div>
-    @component('components.modal-popup')
-    @endcomponent
+    @component('components.modal-popup') @endcomponent
     <div class="sidebar-overlay" data-reff=""></div>
     @include('layout.partials.footer-scripts')
 </body>

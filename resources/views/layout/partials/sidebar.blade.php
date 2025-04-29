@@ -4,80 +4,49 @@
             <ul>
                 <li class="menu-title">Menú</li>
                 <li class="submenu">
-                    <a href="javascript:;"><span class="menu-side"><img
-                                src="{{ URL::asset('/assets/img/icons/menu-icon-01.svg') }}" alt=""></span>
-                        <span> Dashboard </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:;"><span class="menu-side">
+                            <img  src="{{ URL::asset('/assets/img/icons/menu-icon-01.svg') }}" alt=""></span>
+                            <span> Dashboard </span> <span class="menu-arrow"></span>
+                    </a>
                     <ul style="display: none;">
-                        <li><a class="{{ Request::is('/', 'index') ? 'active' : '' }}" href="{{ url('/') }}">Admin
-                                Dashboard</a></li>
-                        <li><a class="{{ Request::is('doctor-dashboard') ? 'active' : '' }}"
-                                href="{{ url('doctor-dashboard') }}">Doctor Dashboard</a></li>
-                        <li><a class="{{ Request::is('patient-dashboard') ? 'active' : '' }}"
-                                href="{{ url('patient-dashboard') }}">Patient Dashboard</a></li>
+                        <li><a class="{{ Request::is('/', 'index') ? 'active' : '' }}" href="{{ url('/') }}">Admin Dashboard</a></li>
+                        <li><a class="{{ Request::is('doctor-dashboard') ? 'active' : '' }}" href="{{ url('doctor-dashboard') }}">Doctor Dashboard</a></li>
+                        <li><a class="{{ Request::is('patient-dashboard') ? 'active' : '' }}"  href="{{ url('patient-dashboard') }}">{{ __('patient.titles') }} Dashboard</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
-                    <a href="javascript:;"><span class="menu-side"><img
-                                src="{{ URL::asset('/assets/img/icons/menu-icon-02.svg') }}" alt=""></span>
-                        <span> Doctors </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:;"><span class="menu-side">
+                            <img src="{{ URL::asset('/assets/img/icons/menu-icon-08.svg') }}" alt=""></span>
+                            <span> {{ __('client.titles') }} </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a class="{{ Request::is('doctors') ? 'active' : '' }}" href="{{ route('client.index') }}">Doctor
-                                List</a></li>
-                        <li><a class="{{ Request::is('add-doctor') ? 'active' : '' }}"
-                                href="{{ route('client.create') }}">Add Doctor</a></li>
-                        <li><a class="{{ Request::is('doctor-profile', 'doctor-setting') ? 'active' : '' }}"
-                                href="{{ url('doctor-profile') }}">Doctor Profile</a></li>
+                        <li><a class="{{ Request::is('clients') ? 'active' : '' }}" href="{{ route('client.index') }}">{{ __('generic.list') }} {{ __('client.titles') }}  </a></li>
+                        <li><a class="{{ Request::is('clients/create') ? 'active' : '' }}"   href="{{ route('client.create') }}">{{ __('generic.create') }} {{ __('client.title') }}</a></li>
+                        <li><a class="{{ Request::is('user/create') ? 'active' : '' }}"   href="{{ route('user.create',array('role_id'=>2)) }}">{{ __('generic.create') }} {{ __('user.doctor') }}</a></li>
+                        <li><a class="{{ Request::is('user/create') ? 'active' : '' }}"   href="{{ route('user.create',array('role_id'=>5)) }}">{{ __('generic.create') }} {{ __('user.asistent') }}</a></li>
+                        <li><a class="{{ Request::is('client/branch/create') ? 'active' : '' }}"   href="{{ route('client.branch.create') }}">{{ __('generic.create') }} {{ __('client.branch') }}</a></li>
+                        <li><a class="{{ Request::is('client/room/create') ? 'active' : '' }}"   href="{{ route('client.room.create') }}">{{ __('generic.create') }} {{ __('client.room') }}</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
-                    <a href="javascript:;"><span class="menu-side"><img
-                                src="{{ URL::asset('/assets/img/icons/menu-icon-03.svg') }}" alt=""></span>
-                        <span>Patients </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:;"><span class="menu-side">
+                        <img  src="{{ URL::asset('/assets/img/icons/menu-icon-03.svg') }}" alt=""></span>
+                        <span>{{ __('patient.titles') }} </span> <span class="menu-arrow"></span>
+                    </a>
                     <ul style="display: none;">
-                        <li><a class="{{ Request::is('patients') ? 'active' : '' }}"
-                                href="{{ url('patients') }}">Patients List</a></li>
-                        <li><a class="{{ Request::is('add-patient') ? 'active' : '' }}"
-                                href="{{ url('add-patient') }}">Add Patients</a></li>
-                        <li><a class="{{ Request::is('edit-patient') ? 'active' : '' }}"
-                                href="{{ url('edit-patient') }}">Edit Patients</a></li>
-                        <li><a class="{{ Request::is('patient-profile', 'patient-setting') ? 'active' : '' }}"
-                                href="{{ url('patient-profile') }}">Patients Profile</a></li>
+                        <li><a class="{{ Request::is('patients') ? 'active' : '' }}"  href="{{ route('patient.index') }}">{{ __('generic.list') }} {{ __('patient.titles') }}</a></li>
+                        <li><a class="{{ Request::is('patients/create') ? 'active' : '' }}"   href="{{ route('patient.create') }}">{{ __('generic.create') }} {{ __('patient.title') }}</a></li>
                     </ul>
                 </li>
-                {{--}}
-                <li class="submenu">
-                    <a href="javascript:;"><span class="menu-side"><img
-                                src="{{ URL::asset('/assets/img/icons/menu-icon-08.svg') }}" alt=""></span>
-                        <span> Staff </span> <span class="menu-arrow"></span></a>
-                    <ul style="display: none;">
-                        <li><a class="{{ Request::is('staff-list') ? 'active' : '' }}"
-                                href="{{ url('staff-list') }}">Staff List</a></li>
-                        <li><a class="{{ Request::is('add-staff','edit-staff') ? 'active' : '' }}"
-                                href="{{ url('add-staff') }}">Add Staff</a></li>
-                        <li><a class="{{ Request::is('staff-profile','staff-setting') ? 'active' : '' }}"
-                                href="{{ url('staff-profile') }}">Staff Profile</a></li>
-                        <li><a class="{{ Request::is('staff-leave','add-leave','edit-leave') ? 'active' : '' }}"
-                                href="{{ url('staff-leave') }}">Leaves</a></li>
-                        <li><a class="{{ Request::is('staff-holiday') ? 'active' : '' }}"
-                                href="{{ url('staff-holiday') }}">Holidays</a></li>
-                        <li><a class="{{ Request::is('staff-attendance') ? 'active' : '' }}"
-                                href="{{ url('staff-attendance') }}">Attendance</a></li>
-                    </ul>
-                </li>
-                {{--}}
                 <li class="submenu">
                     <a href="javascript:;"><span class="menu-side"><img
                                 src="{{ URL::asset('/assets/img/icons/menu-icon-04.svg') }}" alt=""></span>
-                        <span> Appointments </span> <span class="menu-arrow"></span></a>
+                        <span>  {{ __('appointment.titles') }} </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a class="{{ Request::is('appointments') ? 'active' : '' }}"
-                                href="{{ url('appointments') }}">Appointment List</a></li>
-                        <li><a class="{{ Request::is('add-appointment') ? 'active' : '' }}"
-                                href="{{ url('add-appointment') }}">Book Appointment</a></li>
-                        <li><a class="{{ Request::is('edit-appointment') ? 'active' : '' }}"
-                                href="{{ url('edit-appointment') }}">Edit Appointment</a></li>
+                        <li><a class="{{ Request::is('appointments') ? 'active' : '' }}" href="{{ url('appointments') }}">{{ __('generic.list') }} {{ __('appointment.titles') }}</a></li>
+                        <li><a class="{{ Request::is('add-appointment') ? 'active' : '' }}" href="{{ url('add-appointment') }}">Agendar {{ __('appointment.title') }} </a></li>
                     </ul>
                 </li>
+                {{--}}
                 <li class="submenu">
                     <a href="javascript:;"><span class="menu-side"><img
                                 src="{{ URL::asset('/assets/img/icons/menu-icon-05.svg') }}" alt=""></span>
@@ -89,6 +58,16 @@
                                 href="{{ url('add-schedule') }}">Add Schedule</a></li>
                         <li><a class="{{ Request::is('edit-schedule') ? 'active' : '' }}"
                                 href="{{ url('edit-schedule') }}">Edit Schedule</a></li>
+                    </ul>
+                </li>
+                {{--}}
+                <li class="submenu">
+                    <a href="javascript:;"><span class="menu-side"><img
+                                src="{{ URL::asset('/assets/img/icons/profile.svg') }}" alt=""></span>
+                        <span> Usuarios </span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a class="{{ Request::is('users') ? 'active' : '' }}"  href="{{ route('user.index') }}">{{ __('generic.list') }} {{ __('user.titles') }}</a></li>
+                        <li><a class="{{ Request::is('users/create') ? 'active' : '' }}"  href="{{ route('user.create') }}">{{ __('generic.create') }} {{ __('user.title') }}</a></li>
                     </ul>
                 </li>
                 {{--}}

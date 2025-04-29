@@ -41,4 +41,20 @@ class Patient extends BaseModel
     public function getFullIdNumberAttribute() {
         return $this->id_type . ':' . $this->id_number;
     }
+
+    public function avatar(){
+        return $this->files()->whereType('avatar')->latest()->first();
+    }
+
+    public function getProfileNameAttribute(){
+        $path = url('assets/img/profiles/avatar-02.jpg');
+        if($this->avatar()) $path = url('storage/'.$this->avatar()->path);
+
+        return '<div class="profile-image">
+                  <a href="'.url('patient/'.$this->id.'/pofile').'" >
+                                        <img width="28" height="28" src="'.$path.'" class="rounded-circle m-r-5" alt="" style="display:inline-block;">
+                                        '.$this->first_name.' '.$this->last_name.'
+                                    </a>
+                    </div>';
+    }
 }

@@ -47,5 +47,27 @@ class RolesSeeder extends Seeder
             $permission->assignRole($rolUsuario);
         }
 
+        $rolPaciente = Role::create(['name' => 'paciente']);
+
+
+        $modulos =['agenda','clientes'];
+
+        foreach ($modulos as $m){
+            $permission = Permission::where('name',$m)->first();
+            $rolPaciente->givePermissionTo($permission);
+            $permission->assignRole($rolPaciente);
+        }
+
+        $rolAsistente = Role::create(['name' => 'asistente']);
+
+
+        $modulos =['agenda'];
+
+        foreach ($modulos as $m){
+            $permission = Permission::where('name',$m)->first();
+            $rolAsistente->givePermissionTo($permission);
+            $permission->assignRole($rolAsistente);
+        }
+
     }
 }

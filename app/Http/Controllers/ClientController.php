@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Services\FileService;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -31,6 +32,24 @@ class ClientController extends Controller
 
     public function update(Request $request,$id){
 
+        $model = Client::find($id);
+        $model->fill($request->all());
+
+        if($model->save()){
+
+
+            if($request->file('logo')){
+                $service = new FileService();
+                $filename = 'client_logo_'.$model->id;
+                $model->logo = $service->uploadSingleFile($request->file('logo'),'clients',$filename);
+                $model->save();
+            }
+            $request->session()->flash('message.success','Actualización co exito.');
+        }else{
+            $request->session()->flash('message.success','Hubo un error y no se pudo actualizar.');
+        }
+
+        return redirect(route('client.edit',$id));
     }
 
     public function destroy($id){

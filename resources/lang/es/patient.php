@@ -22,5 +22,6 @@ return [
     'status'=>'Estatus',
     'active'=>'Activo',
     'created_at'=>'Fecha de creación',
-    'updated_at'=>'Fecha de modificación'
+    'updated_at'=>'Fecha de modificación',
+    'profile_name'=>'Nombre'
 ];

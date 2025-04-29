@@ -128,6 +128,10 @@ class BaseModel extends Model
         });
     }
 
+    public function listar($model){
+        return $this->pluck('full_name','id');
+    }
+
     public function getCreatedAtAttribute($attr) {
         return Carbon::parse($attr)->format('d-m-Y'); //Change the format to whichever you desire
     }
@@ -137,6 +141,6 @@ class BaseModel extends Model
     }
 
     public function files(){
-        return $this->hasMany(File::class)->where('table_name',$this->getTable());
+        return $this->hasMany(File::class,'record_id')->where('table_name',$this->getTable());
     }
 }

@@ -9,4 +9,5 @@ return [
     'cancel'=>'Cancelar',
     'back'=>'Atras',
     'detail'=>'Detalle',
+    'Choose File'=>'Escoger Archivo',
 ];

@@ -58,12 +58,16 @@ class AppointmentController extends Controller
         return view('appointments.calendar',compact('data','desde','hasta'));
     }
 
+    public function index(){
+        return view('clients.create');
+    }
+
     public function create(){
         return view('clients.create');
     }
 
     public function store(Request $request){
-        
+
        $appointment= New Appointment();
        $fields=$request->except('_token');
        $appointment->fill($fields);

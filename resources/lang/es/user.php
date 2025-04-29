@@ -12,5 +12,9 @@ return [
     'client'=>'Cliente',
     'acciones'=>'Acciones',
     'new_password'=>'Nueva contraseña',
-    'confirm_password'=>'Confirmar contraseña'
+    'confirm_password'=>'Confirmar contraseña',
+    'doctor'=>'Doctor',
+    'asistent'=>'Asistente',
+    'rol'=>'Rol',
+    'roles'=>'Roles'
 ];

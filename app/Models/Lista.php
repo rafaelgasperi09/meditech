@@ -39,4 +39,14 @@ class Lista extends Model
             'F'=>'Femenino',
         ];
     }
+
+    public static function branchType(){
+
+        return [
+            'centro de salud'=>'Centro de Salud',
+            'clinica'=>'Clinica',
+            'hospital'=>'Hospital',
+            'cosnultorio'=>'Consultorio',
+        ];
+    }
 }

@@ -1,24 +1,30 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight inline-block" >
-            {{ __('user.titles') }}
+    <div class="page-wrapper">
+        <div class="content">
+            <!-- Page Header -->
+            @component('components.page-header')
+                @slot('title')
+                    {{ __('user.titles') }}
+                @endslot
+                @slot('li_1')
+                        {{ __('generic.list') }} {{ __('user.titles') }}
+                @endslot
+            @endcomponent
+            <!-- /Page Header -->
 
-        </h2>
-        <x-primary-link class="ms-3 float-right" type="button" href="{{route('user.create')}}">
-            {{ __('label.new') }}
-        </x-primary-link>
-    </x-slot>
-    <div class="py-10">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-
-                <div class="p-6 text-gray-900">
-                    <livewire:data-table model="{{$model}}"
-                                         :columns="['id', 'full_name', 'email','acciones']"
-                                         :actions="['edit','delete']"
-                                         routename="user"
-                                         wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table show-entire p-0 table-dash">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <livewire:data-table model="{{$model}}"
+                                                 :columns="['id', 'full_name', 'email','acciones']"
+                                                 :actions="['edit','delete']"
+                                                 routename="user"
+                                                 wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

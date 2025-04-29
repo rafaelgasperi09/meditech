@@ -5,7 +5,7 @@
           {{$title}}
         @endslot
         @slot('li_1')
-            {{ route('patient.create') }}
+            {{ route($route_name.'.create') }}
         @endslot
     @endcomponent
     <!-- /Table Header -->
@@ -27,24 +27,23 @@
         @foreach ($data as $row)
             <tr class="">
                 @foreach ($columns as $column)
-                    <td class="border-b border-gray-100 p-2">
+                    <td class="border-b border-gray-100 p-2 @if($column=='acciones')  class="text-end"@endif" >
                         @if(App\Models\Helper::urlIsImage($row->$column))
                             <img src="{{$row->$columns}}">
                         @elseif($column=='acciones')
-                            @if(in_array('edit',$actions))
-                                <x-action-link href="{{route($route_name.'.edit',$row->id)}}" title="{{ __('button.edit') }}"><i class="fa-solid fa-edit" aria-hidden="true"></i> </x-action-link>
-                            @endif
-                            @if(in_array('delete',$actions))
-                                    <form method="post" action="{{ route($route_name.'.destroy',$row->id) }}" class="inline-block">
-                                        @csrf
-                                        @method('delete')
-                                        <x-danger-button class="ms-3" title="{{ __('button.delete') }}">
-                                            <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                                        </x-danger-button>
-                                    </form>
-                            @endif
+                            <div class="dropdown dropdown-action">
+                                <a href="javascript:;" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i   class="fa fa-ellipsis-v"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    @if(in_array('edit',$actions))
+                                    <a class="dropdown-item" href="{{route($route_name.'.edit',$row->id)}}"><i   class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+                                    @endif
+                                    @if(in_array('delete',$actions))
+                                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal"  data-bs-target="#delete_patient"><i class="fa fa-trash-alt m-r-5"></i> Delete</a>
+                                    @endif
+                                </div>
+                            </div>
                         @else
-                            {{ $row->$column }}
+                            {!! $row->$column  !!}
                         @endif
                     </td>
                 @endforeach
@@ -54,7 +53,7 @@
     </table>
 
     <div class="mt-3" class="float-right">
-        {{ $data->links('pagination::bootstrap-5') }}
+        {{ $data->links() }}
     </div>
     <p>&nbsp;</p>
 </div>

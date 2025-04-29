@@ -7,7 +7,7 @@
                     {{ __('patient.titles') }}
                 @endslot
                 @slot('li_1')
-                        {{ __('patient.titles') }}   {{ __('generic.list') }}
+                    {{ __('generic.list') }} {{ __('patient.titles') }}
                 @endslot
             @endcomponent
             <!-- /Page Header -->
@@ -18,12 +18,11 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <livewire:data-table model="{{$model}}"
-                                                     :columns="['id', 'full_name', 'birthdate','full_id_number','email','whatsapp','acciones']"
+                                                     :columns="['id', 'profile_name', 'birthdate','full_id_number','email','whatsapp','acciones']"
                                                      :actions="['edit','delete']"
                                                      routename="patient"
                                                      sortField="first_name"
                                                      sortDirecction="asc"
-                                                     title="{{ __('generic.list') }} {{ __('patient.titles') }} "
                                                      wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
                             </div>
                         </div>
@@ -34,6 +33,4 @@
         @component('components.notification-box')
         @endcomponent
     </div>
-
-
 </x-app-layout>
