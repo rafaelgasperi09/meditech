@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-heading">
-                                            <h4>{{ __('generic.detail') }} {{ __('patient.title') }} </h4>
+                                            <h4> Agendar {{ __('appointment.title') }} </h4>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4">

@@ -24,32 +24,32 @@
                             <form method="POST" action="{{ route('client.branch.store') }}" enctype="multipart/form-data">
                             @csrf
                             <!-- Client -->
-                            <div>
-                                <x-input-label for="client_id" :value="__('client.title')" />
-                                <x-select-input name="client_id" :options="\App\Models\Client::pluck('name','id')->toArray()" :selected="[null]" class="block w-full"/>
+                            <div class="input-block  local-forms">
+                                <x-input-label for="client_id" :value="__('client.title')" required/>
+                                <x-select-input name="client_id" :options="\App\Models\Client::pluck('name','id')->toArray()" :selected="[null]" class="block w-full" autofocus/>
                                 <x-input-error :messages="$errors->get('client_id')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- Name -->
-                            <div>
-                                <x-input-label for="name" :value="__('Nombre')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus/>
+                            <div class="input-block  local-forms">
+                                <x-input-label for="name" :value="__('Nombre')" required/>
+                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required />
                                 <x-input-error :messages="$errors->get('name')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- PHONE -->
-                            <div>
-                                <x-input-label for="telefono" :value="__('Teléfono')" />
+                            <div class="input-block  local-forms">
+                                <x-input-label for="telefono" :value="__('Teléfono')" required/>
                                 <x-text-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono')"/>
                                 <x-input-error :messages="$errors->get('telefono')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- ADDRESS -->
-                            <div>
+                            <div class="input-block  local-forms">
                                 <x-input-label for="address" :value="__('Dirección')" />
                                 <x-textarea-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"/>
                                 <x-input-error :messages="$errors->get('address')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- TYPE -->
-                            <div>
-                                <x-input-label for="type" :value="__('Tipo')" />
+                            <div class="input-block  local-forms">
+                                <x-input-label for="type" :value="__('Tipo')" required/>
                                 <x-select-input name="type" :options="\App\Models\Lista::branchType()" :selected="[old('type')]" class="block w-full"/>
                                 <x-input-error :messages="$errors->get('type')" class="mt-2" /><p>&nbsp;</p>
                             </div>

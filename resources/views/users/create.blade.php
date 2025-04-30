@@ -91,6 +91,12 @@
                                             <label for="file" class="upload">Buscar Archivo</label>
                                         </div>
                                     </div>
+                                    <div class="upload-images upload-size">
+                                        <img src="{{ URL::asset('/assets/img/favicon.png')  }}" alt="Image" id="preview">
+                                        <a href="javascript:void(0);" class="btn-icon logo-hide-btn">
+                                            <i class="feather-x-circle"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div><p>&nbsp;</p><p>&nbsp;</p>
                             <div class="row">

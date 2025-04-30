@@ -24,25 +24,25 @@
                             <form method="POST" action="{{ route('client.room.store') }}" enctype="multipart/form-data">
                             @csrf
                             <!-- Branch -->
-                            <div>
-                                <x-input-label for="branch_id" :value="__('client.branch')" />
-                                <x-select-input name="branch_id" :options="\App\Models\Branch::pluck('name','id')->toArray()" :selected="[null]" class="block w-full"/>
+                            <div class="input-block  local-forms">
+                                <x-input-label for="branch_id" :value="__('client.branch')" required/>
+                                <x-select-input name="branch_id" :options="\App\Models\Branch::pluck('name','id')->toArray()" :selected="[null]" class="block w-full" autofocus/>
                                 <x-input-error :messages="$errors->get('branch_id')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- Name -->
-                            <div>
-                                <x-input-label for="name" :value="__('Nombre')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus/>
+                            <div class="input-block  local-forms">
+                                <x-input-label for="name" :value="__('Nombre')" required/>
+                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required />
                                 <x-input-error :messages="$errors->get('name')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- NUMBER -->
-                            <div>
+                            <div class="input-block  local-forms">
                                 <x-input-label for="ruc" :value="__('Número')" />
                                 <x-text-input id="number" class="block mt-1 w-full" type="text" name="number" :value="old('number')"/>
                                 <x-input-error :messages="$errors->get('number')" class="mt-2" /><p>&nbsp;</p>
                             </div>
                             <!-- FLOOR -->
-                            <div>
+                            <div class="input-block  local-forms">
                                 <x-input-label for="floor" :value="__('Piso')" />
                                 <x-text-input id="floor" class="block mt-1 w-full" type="text" name="floor" :value="old('floor')"/>
                                 <x-input-error :messages="$errors->get('floor')" class="mt-2" /><p>&nbsp;</p>

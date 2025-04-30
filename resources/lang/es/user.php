@@ -16,5 +16,6 @@ return [
     'doctor'=>'Doctor',
     'asistent'=>'Asistente',
     'rol'=>'Rol',
-    'roles'=>'Roles'
+    'roles'=>'Roles',
+    'profile_name'=>'Nombre'
 ];
