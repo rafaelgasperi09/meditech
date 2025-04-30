@@ -10,16 +10,16 @@
                 <div class="about-me-list">
                     <ul class="list-space">
                         <li>
-                            <h4>Gender</h4>
-                            <span>Male</span>
+                            <h4>{{__('patient.gender')}}</h4>
+                            <span>{{$data->gender}}</span>
                         </li>
                         <li>
-                            <h4>Operation Done</h4>
-                            <span>30+</span>
+                            <h4>{{__('patient.birthdate')}}</h4>
+                            <span>{{$data->birthdate}}</span>
                         </li>
                         <li>
-                            <h4>Designation</h4>
-                            <span>Engineer</span>
+                            <h4>{{__('patient.email')}}</h4>
+                            <span>{{$data->email}}</span>
                         </li>
                     </ul>
                 </div>

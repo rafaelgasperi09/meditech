@@ -46,6 +46,10 @@ class Patient extends BaseModel
         return $this->files()->whereType('avatar')->latest()->first();
     }
 
+    public function appointments(){
+        return $this->hasMany(Appointment::class);
+    }
+
     public function getProfileNameAttribute(){
         $path = url('assets/img/profiles/avatar-02.jpg');
         if($this->avatar()) $path = url('storage/'.$this->avatar()->path);

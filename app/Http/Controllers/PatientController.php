@@ -23,9 +23,7 @@ class PatientController extends Controller
     }
 
     public function profile(Request $request,$id){
-        $data = Patient::find($id);
-
-        return view('patients.profile',compact('data'));
+        return view('patients.profile',compact('id'));
     }
 
     public function edit($id){

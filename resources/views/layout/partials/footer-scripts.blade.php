@@ -62,6 +62,7 @@
     <script src="{{ URL::asset('/assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js') }}"></script>
 @endif
 
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 
 <!-- Custom JS -->
 <script src="{{ URL::asset('/assets/js/app.js') }}"></script>

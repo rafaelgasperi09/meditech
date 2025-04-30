@@ -1,23 +1,22 @@
-<?php $page = 'patient-profile'; ?>
 <x-app-layout>
     <div class="page-wrapper">
         <div class="content">
             <!-- Page Header -->
             @component('components.page-header')
                 @slot('title')
-                    Patients
+                    {{ __('patient.titles') }}
                 @endslot
                 @slot('li_1')
-                    Patient Profile
+                    {{ __('patient.title') }}   {{__('patient.profile')}}
                 @endslot
             @endcomponent
             <!-- /Page Header -->
             <div class="row">
                 <div class="col-sm-12">
-                    @livewire('patient.patient-head')
+                    <livewire:patient.patient-head patient_id="{{$id}}"/>
                     <div class="row">
-                        @livewire('patient.patient-profile-about')
-                        @livewire('patient.patient-profile-details')
+                        <livewire:patient.patient-profile-about patient_id="{{$id}}"/>
+                        <livewire:patient.patient-profile-details patient_id="{{$id}}"/>
                     </div>
                 </div>
             </div>

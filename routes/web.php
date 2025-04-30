@@ -9,6 +9,7 @@ use App\Http\Controllers\PatientController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AppointmentController;
 use \App\Http\Controllers\ApiController;
+use \App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,7 +22,15 @@ Route::get('/login', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('admin.dashboard');
+
+Route::get('/patient-dashboard', function () {
+    return view('Dashboard.patient-dashboard');
+})->middleware(['auth', 'verified'])->name('patient.dashboard');
+
+Route::get('/doctor-dashboard', function () {
+    return view('Dashboard.doctor-dashboard');
+})->middleware(['auth', 'verified'])->name('doctor.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -126,6 +135,18 @@ Route::group(array('prefix' => 'appointments','middleware'=>['auth','verified'])
     Route::post('/{id}/update', [AppointmentController::class, 'update'])->name('appointment.update');
 
     Route::delete('/{id}', [AppointmentController::class, 'destroy'])->name('appointment.destroy');
+
+});
+
+Route::group(array('prefix' => 'settings','middleware'=>['auth','verified']), function() {
+
+    Route::get('/create_consultation_template', [SettingController::class, 'consultationTemplate'])->name('setting.create_template');
+
+    Route::get('/create_rapid_access', [SettingController::class, 'rapidAccess'])->name('setting.create_rapid_access');
+
+    Route::post('/store_consultation_template', [SettingController::class, 'consultationTemplateStore'])->name('setting.create_template_store');
+
+    Route::post('/store_rapid_access', [SettingController::class, 'rapidAccessStore'])->name('setting.create_rapid_access_store');
 
 });
 

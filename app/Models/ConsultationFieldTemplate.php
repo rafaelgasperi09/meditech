@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ConsultationFieldTemplate extends BaseModel
 {
     protected $table='consultation_fields_templates';
+    protected $fillable=['type','client_id','user_id','consultation_field_id'];
 
     public function client(){
         return $this->belongsTo(Client::class);

@@ -9,7 +9,7 @@
                             <span> Dashboard </span> <span class="menu-arrow"></span>
                     </a>
                     <ul style="display: none;">
-                        <li><a class="{{ Request::is('/', 'index') ? 'active' : '' }}" href="{{ url('/') }}">Admin Dashboard</a></li>
+                        <li><a class="{{ Request::is('/dashboard', 'index') ? 'active' : '' }}" href="{{ url('/dashboard') }}">Admin Dashboard</a></li>
                         <li><a class="{{ Request::is('doctor-dashboard') ? 'active' : '' }}" href="{{ url('doctor-dashboard') }}">Doctor Dashboard</a></li>
                         <li><a class="{{ Request::is('patient-dashboard') ? 'active' : '' }}"  href="{{ url('patient-dashboard') }}">{{ __('patient.titles') }} Dashboard</a></li>
                     </ul>
@@ -43,7 +43,7 @@
                         <span>  {{ __('appointment.titles') }} </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a class="{{ Request::is('appointments') ? 'active' : '' }}" href="{{ url('appointments') }}">{{ __('generic.list') }} {{ __('appointment.titles') }}</a></li>
-                        <li><a class="{{ Request::is('add-appointment') ? 'active' : '' }}" href="{{ url('add-appointment') }}">Agendar {{ __('appointment.title') }} </a></li>
+                        <li><a class="{{ Request::is('appointments/calendar') ? 'active' : '' }}" href="{{ route('appointment.calendar') }}">{{ __('Calendario') }} </a></li>
                     </ul>
                 </li>
                 {{--}}
@@ -61,6 +61,15 @@
                     </ul>
                 </li>
                 {{--}}
+                <li class="submenu">
+                    <a href="javascript:;"><span class="menu-side">
+                            <img src="{{ URL::asset('/assets/img/icons/setting-icon-01.svg') }}" alt=""></span>
+                        <span> Configuraciones </span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a class="{{ Request::is('settings/create_consultation_template') ? 'active' : '' }}"  href="{{ route('setting.create_template') }}">{{ __('Plantilla Consulta') }}</a></li>
+                        <li><a class="{{ Request::is('settings/create_rapid_access') ? 'active' : '' }}"  href="{{ route('setting.create_rapid_access') }}">{{ __('Accesos Rapidos') }}</a></li>
+                    </ul>
+                </li>
                 <li class="submenu">
                     <a href="javascript:;"><span class="menu-side">
                             <img src="{{ URL::asset('/assets/img/icons/profile.svg') }}" alt=""></span>
