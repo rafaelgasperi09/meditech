@@ -20,8 +20,32 @@
                                     <h4>  {{ __('Configurar acceso rapido de procedimientos , imagenes y laboratorios.') }}</h4>
                                 </div>
                             </div>
-                            <form method="POST" action="{{ route('setting.create_rapid_access_store') }}">
-                            </form>
+                            <div class="col-md-6">
+                                <div class="input-block row">
+                                    <label class="col-form-label col-lg-2">{{__('Laboratorios') }}</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/laboratory')}}" type="laboratory"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-block row">
+                                    <label class="col-form-label col-lg-2">{{__('Imagenes') }}</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/images')}}" type="image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-block row">
+                                    <label class="col-form-label col-lg-2">{{__('Procedimientos') }}</label>
+                                    <div class="col-md-10">
+                                        <div class="input-group mb-3">
+                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/procedure')}}" type="procedure"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

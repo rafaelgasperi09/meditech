@@ -10,4 +10,5 @@ return [
     'back'=>'Atras',
     'detail'=>'Detalle',
     'Choose File'=>'Escoger Archivo',
+    'delete'=>'Borrar'
 ];

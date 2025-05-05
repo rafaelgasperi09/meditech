@@ -6,6 +6,7 @@
             $pic = str_replace('(','',$pic);
             $pic = str_replace(')','',$pic);
             $pic = str_replace('/','',$pic);
+             $pic = str_replace('-','',$pic);
         @endphp
         <div class="sel-list-item">
             <div>

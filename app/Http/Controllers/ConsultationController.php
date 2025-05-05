@@ -6,12 +6,13 @@ use App\Models\Appointment;
 use App\Models\Consultation;
 use App\Models\ConsultationField;
 use App\Models\ConsultationFieldTemplate;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ConsultationController extends Controller
 {
-    public function create(Request $request){
+    public function create(Request $request,$appointment_id){
 
         $data=array();
         $consultation_template = ConsultationFieldTemplate::whereUserId(Auth::getUser()->id)->pluck('consultation_field_id');
@@ -25,11 +26,14 @@ class ConsultationController extends Controller
 
         $client_id = auth()->user()->clients()->first()->id;
         $consultationPre = Consultation::whereStatus('pre-consulta')->whereClientId($client_id)->first();
-        $consultationPreApp = Consultation::whereAppointmentId($request->appointment_id)->first();
-        $appointmment=Appointment::find($request->appointment_id);
-        if($request->has('appointment_id') && !$consultationPreApp){
-            $consultation =  Consultation::create(['client_id'=>$client_id,'appointment_id'=>$request->appointment_id,'status'=>'pre-consulta','patient_id'=>$appointmment->patient_id]);
-        }else if(!$request->has('appointment_id') && !$consultationPre){
+        $consultationPreApp = Consultation::whereAppointmentId($appointment_id)->first();
+        $appointment=Appointment::find($appointment_id);
+        $patient = Patient::find($appointment->patient_id);
+
+        if(!$consultationPreApp){
+
+            $consultation =  Consultation::create(['client_id'=>$client_id,'appointment_id'=>$appointment->id,'status'=>'pre-consulta','patient_id'=>$patient->id]);
+        }else if(!$consultationPre){
             $consultation =  Consultation::create(['client_id'=>$client_id,'status'=>'pre-consulta']);
         }else if($consultationPre){
             $consultation = $consultationPre;
@@ -37,6 +41,6 @@ class ConsultationController extends Controller
             $consultation = $consultationPreApp;
         }
 
-        return view('consultations.create',compact('data','consultation'));
+        return view('consultations.create',compact('data','consultation','patient','appointment'));
     }
 }

@@ -40,7 +40,7 @@ class Appointment extends BaseModel
     }
 
     public function medicalspeciality(){
-        return $this->belongsTo(MedicalSpeciality::class);
+        return $this->belongsTo(MedicalSpeciality::class)->withDefault(['name'=>'N/A']);
     }
     public function status(){
         return $this->hasMany(AppointmentStatus::class);

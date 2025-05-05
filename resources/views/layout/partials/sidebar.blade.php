@@ -63,7 +63,7 @@
                 {{--}}
                 <li class="submenu">
                     <a href="javascript:;"><span class="menu-side">
-                            <img src="{{ URL::asset('/assets/img/icons/setting-icon-01.svg') }}" alt=""></span>
+                            <img src="{{ URL::asset('/assets/img/icons/menu-icon-16.svg') }}" alt=""></span>
                         <span> Configuraciones </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a class="{{ Request::is('settings/create_consultation_template') ? 'active' : '' }}"  href="{{ route('setting.create_template') }}">{{ __('Plantilla Consulta') }}</a></li>
@@ -72,7 +72,7 @@
                 </li>
                 <li class="submenu">
                     <a href="javascript:;"><span class="menu-side">
-                            <img src="{{ URL::asset('/assets/img/icons/profile.svg') }}" alt=""></span>
+                            <img src="{{ URL::asset('/assets/img/icons/menu-icon-08.svg') }}" alt=""></span>
                         <span> Usuarios </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a class="{{ Request::is('users') ? 'active' : '' }}"  href="{{ route('user.index') }}">{{ __('generic.list') }} {{ __('user.titles') }}</a></li>

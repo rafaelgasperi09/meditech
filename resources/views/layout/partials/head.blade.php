@@ -48,4 +48,5 @@
  <!-- Main CSS -->
  <link rel="stylesheet" type="text/css" href="{{ url('assets/css/style.css') }}">
 
+ <link rel="stylesheet" type="text/css" href="{{ url('styles/default.css?time='.time()) }}">
 

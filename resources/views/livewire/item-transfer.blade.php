@@ -1,7 +1,7 @@
 <div>
     <!-- Dragula JS -->
-    <script src="assets/plugins/dragula/js/dragula.min.js"></script>
-    <script src="assets/plugins/dragula/js/drag-drop.min.js"></script>
+    <script src="{{ url('assets/plugins/dragula/js/dragula.min.js') }}"></script>
+    <script src="{{ url('assets/plugins/dragula/js/drag-drop.min.js') }}"></script>
     {{-- Nothing in the world is as soft and yielding as water. --}}
     <div class="flex gap-0" x-data>
         <!-- Tabla de disponibles -->

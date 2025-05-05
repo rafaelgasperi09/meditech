@@ -11,6 +11,7 @@ return [
     'id_type' => 'Tipo documento',
     'full_id_number' => '#Documento',
     'birthdate'=>'Fecha Nacimiento',
+    'age'=>'Edad',
     'gender'=>'Genero',
     'email'=>'Correo Electrónico',
     'whatsapp'=>'Whatsapp',
@@ -23,5 +24,6 @@ return [
     'active'=>'Activo',
     'created_at'=>'Fecha de creación',
     'updated_at'=>'Fecha de modificación',
-    'profile_name'=>'Nombre'
+    'profile_name'=>'Nombre',
+    'profile'=>'Perfil',
 ];
