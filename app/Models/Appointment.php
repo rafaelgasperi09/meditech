@@ -49,4 +49,8 @@ class Appointment extends BaseModel
     public function type(){
         return $this->belongsTo(AppointmentType::class,'appointment_type_id');
     }
+
+    public function detail(){
+        return $this->hasMany(AppointmentDetail::class);
+    }
 }

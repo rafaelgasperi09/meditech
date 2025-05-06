@@ -10,5 +10,6 @@ return [
     'type'=>'Tipo',
     'date'=>'Fecha',
     'time'=>'Hora',
-    'status'=>'Estatus'
+    'status'=>'Estatus',
+    'booking'=>'Agendar Cita'
 ];

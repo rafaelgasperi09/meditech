@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-heading">
-                                            <h4> Agendar {{ __('appointment.title') }} </h4>
+                                            <h4> {{__('appointment.booking')}} </h4>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4">
@@ -76,8 +76,22 @@
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-6">
                                         <div class="input-block local-forms">
+                                            <x-input-label for="branch_id" :value="__('Sucursal')" />
+                                            <x-select-input name="branch_id" :options="\App\Models\Branch::pluck('name','id')->toArray()"  class="block w-full"/>
+                                            <x-input-error :messages="$errors->get('branch_id')" class="mt-2" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-6">
+                                        <div class="input-block local-forms">
+                                            <x-input-label for="consulting_room_id" :value="__('Consultorio')" />
+                                            <x-select-input name="consulting_room_id" :options="\App\Models\ConsultingRoom::pluck('name','id')->toArray()"  class="block w-full"/>
+                                            <x-input-error :messages="$errors->get('consulting_room_id')" class="mt-2" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-6">
+                                        <div class="input-block local-forms">
                                             <x-input-label for="patient" :value="__('Procedimiento')" required/>
-                                            <input class="form-control" type="text">
+                                            <x-select-input name="consulting_room_id" :options="\App\Models\AppointmentType::pluck('name','id')->toArray()"  class="block w-full"/>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-12">
@@ -88,8 +102,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="doctor-submit text-end">
-                                            <button type="submit" class="btn btn-primary submit-form me-2">Submit</button>
-                                            <button type="submit" class="btn btn-primary cancel-form">Cancel</button>
+                                            <button type="submit" class="btn btn-primary submit-form me-2">{{__('generic.regsiter')}}</button>
+                                            <button type="submit" class="btn btn-primary cancel-form">{{__('generic.cancel')}}</button>
                                         </div>
                                     </div>
                                 </div>

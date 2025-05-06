@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-md-6">
         <div class="input-group mb-3">
-            <input type="text"  wire:model.live="query"   class="form-control" placeholder="Buscar..." >
-            <button class="input-group-text" id="basic-addon2" wire:click="clearInput()">{{__('Limpiar')}}</button>
+            <input type="text"  wire:model.live="query"   class="form-control" placeholder="Buscar {{$type}}" >
+            <button class="input-group-text btn btn-info submit-form me-2" id="basic-addon2" wire:click="clearInput()"><i class="fa fa-close"></i> {{__('Limpiar')}}</button>
         </div>
 
         <!-- Spinner de Carga -->
@@ -31,7 +31,7 @@
                     {{$r->cpt->code}} | {{$r->cpt->description_es}}
                 </div>
                 <div class="col-md-2">
-                     <button class="btn btn-primary submit-form me-2" wire:click="delete({{$r->id}})">
+                     <button class="btn btn-danger submit-form me-2" wire:click="delete({{$r->id}})">
                         <i class="fa fa-trash" title="eliminar"></i> {{__('generic.delete')}}
                     </button>
                 </div>

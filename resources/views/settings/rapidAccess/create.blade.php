@@ -21,7 +21,6 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <label class="col-form-label col-lg-12"><b>{{__('Laboratorios') }}</b></label>
                                 <div class="col-lg-12">
                                     <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/laboratory')}}" type="laboratory" key="labs"/>
                                 </div>
@@ -40,9 +39,8 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <label class="col-form-label col-lg-12"><b>{{__('Imagenes') }}</b></label>
                                 <div class="col-lg-12">
-                                    <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/images')}}" type="images" key="images">
+                                    <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/images')}}" type="images" key="images"/>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +57,6 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <label class="col-form-label col-lg-12"><b>{{__('Procedimientos') }}</b></label>
                                 <div class="col-lg-12">
                                     <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/procedure')}}" type="procedure" key="procedure"/>
                                 </div>
