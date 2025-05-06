@@ -1,6 +1,9 @@
 <div class="row">
     <div class="col-md-6">
-        <input type="text"  wire:model.live="query"   class="form-control" placeholder="Buscar..." >
+        <div class="input-group mb-3">
+            <input type="text"  wire:model.live="query"   class="form-control" placeholder="Buscar..." >
+            <button class="input-group-text" id="basic-addon2" wire:click="clearInput()">{{__('Limpiar')}}</button>
+        </div>
 
         <!-- Spinner de Carga -->
         <div wire:loading class="absolute right-2 top-2">
@@ -20,18 +23,19 @@
             </ul>
         @endif
     </div>
-
     <div class="col-md-6">
-        <ul>
-            @foreach($selected as $r)
-                <li>
-                    <div class="input-group mb-3">
-                        {{$r->cpt->code}} | {{$r->cpt->description_es}}
-                        <span class="input-group-text" id="basic-addon2" wire:click="delete({{$r->id}})"><i class="fa fa-trash" title="eliminar"/></span></span>
-                    </div>
-
-                </li>
-            @endforeach
-        </ul>
+        <b>Seleccionados</b>
+        @foreach($selected as $r)
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    {{$r->cpt->code}} | {{$r->cpt->description_es}}
+                </div>
+                <div class="col-md-2">
+                     <button class="btn btn-primary submit-form me-2" wire:click="delete({{$r->id}})">
+                        <i class="fa fa-trash" title="eliminar"></i> {{__('generic.delete')}}
+                    </button>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>

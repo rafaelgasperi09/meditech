@@ -17,33 +17,51 @@
                         <div class="card-body">
                             <div class="col-12">
                                 <div class="form-heading">
-                                    <h4>  {{ __('Configurar acceso rapido de procedimientos , imagenes y laboratorios.') }}</h4>
+                                    <h4>  {{ __('Configurar acceso rapido de laboratorios.') }}</h4>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="input-block row">
-                                    <label class="col-form-label col-lg-2">{{__('Laboratorios') }}</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group mb-3">
-                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/laboratory')}}" type="laboratory"/>
-                                        </div>
-                                    </div>
+                            <div class="col-md-12">
+                                <label class="col-form-label col-lg-12"><b>{{__('Laboratorios') }}</b></label>
+                                <div class="col-lg-12">
+                                    <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/laboratory')}}" type="laboratory" key="labs"/>
                                 </div>
-                                <div class="input-block row">
-                                    <label class="col-form-label col-lg-2">{{__('Imagenes') }}</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group mb-3">
-                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/images')}}" type="image"/>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="form-heading">
+                                    <h4>  {{ __('Configurar acceso rapido de imagenes.') }}</h4>
                                 </div>
-                                <div class="input-block row">
-                                    <label class="col-form-label col-lg-2">{{__('Procedimientos') }}</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group mb-3">
-                                            <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/procedure')}}" type="procedure"/>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="col-form-label col-lg-12"><b>{{__('Imagenes') }}</b></label>
+                                <div class="col-lg-12">
+                                    <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/images')}}" type="images" key="images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="form-heading">
+                                    <h4>  {{ __('Configurar acceso rapido de procedimientos.') }}</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="col-form-label col-lg-12"><b>{{__('Procedimientos') }}</b></label>
+                                <div class="col-lg-12">
+                                    <livewire:consultation.search-cpt-dropdown path="{{url('api/cpts/procedure')}}" type="procedure" key="procedure"/>
                                 </div>
                             </div>
                         </div>
