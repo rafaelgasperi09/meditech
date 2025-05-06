@@ -1,6 +1,4 @@
-<?php $page = 'login'; ?>
-@extends('layout.mainlayout')
-@section('content')
+<x-guest-layout>
     <div class="container-fluid px-0">
         <div class="row">
             <!-- Login logo -->
@@ -12,6 +10,7 @@
                 </div>
             </div>
             <!-- /Login logo -->
+
             <!-- Login Content -->
             <div class="col-lg-6 login-wrap-bg">
                 <div class="login-wrapper">
@@ -19,55 +18,71 @@
                         <div class="login-right">
                             <div class="login-right-wrap">
                                 <div class="account-logo">
-                                    <a href="{{ url('/') }}"><img src="{{ URL::asset('/assets/img/login-logo.png') }}" alt=""></a>
+                                    <a href="{{ url('/') }}"><img src="{{ URL::asset('/assets/img/login-logo.png') }}"
+                                            alt=""></a>
                                 </div>
-                                <h2>Login</h2>
+                                <h2>Getting Started</h2>
                                 <!-- Form -->
-                                <form action="{{ route('login') }}" method="POST">
+                                <form action="{{ route('patient.create') }}" method="POST">
                                     @csrf
                                     <div class="form-group">
-                                        <label>Email <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="text" id="email" value="" name="email">
+                                        <label>Full Name <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" id="name" value="{{old('name')}}" name="name">
                                         <div class="text-danger pt-2">
-                                            @error('0')
-                                            {{ $message }}
+                                            @error('name')
+                                                {{ $message }}
                                             @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" id="email" name="email">
+                                        <div class="text-danger pt-2">
                                             @error('email')
-                                            {{ $message }}
+                                                {{$message}}
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Password <span class="login-danger">*</span></label>
-                                        <input class="form-control pass-input" type="password" id="password" name="password" value="">
+                                        <input class="form-control pass-input" type="password" id="password" name="password" value="{{old('password')}}">
                                         <span class="profile-views feather-eye-off toggle-password"></span>
                                         <div class="text-danger pt-2">
-                                            @error('0')
-                                            {{ $message }}
-                                            @enderror
                                             @error('password')
-                                            {{ $message }}
+                                                {{$message}}
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Confirm Password <span class="login-danger">*</span></label>
+                                        <input class="form-control pass-input-confirm" type="password" id="confirm-password" name="password">
+                                        <span class="profile-views feather-eye-off confirm-password"></span>
+                                        <div class="text-danger pt-2">
+                                            @error('password')
+                                                {{$message}}
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="forgotpass">
                                         <div class="remember-me">
-                                            <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
+                                            <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> I agree to the
+                                                <a href="javascript:;">&nbsp terms of service </a>&nbsp and <a
+                                                    href="javascript:;">&nbsp privacy policy </a>
                                                 <input type="checkbox" name="radio">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
-                                        <a href="{{ url('forgot-password') }}">Forgot Password?</a>
                                     </div>
+                                    <h4>Faltarian los datos de la cita para programarla (Fecha , Hora , Doctor , Sucusal ? ,consultroio ? , esto supongo que se puede preguntar cuando se confirme la cita )</h4>
                                     <div class="form-group login-btn">
-                                        <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                        <button class="btn btn-primary btn-block" type="submit">Sign up</button>
                                     </div>
                                 </form>
                                 <!-- /Form -->
 
                                 <div class="next-sign">
-                                    <p class="account-subtitle">Need an account? <a href="{{ url('register') }}">Sign Up</a>
-                                    </p>
+                                    <p class="account-subtitle">Already have account? <a
+                                            href="{{ url('login') }}">Login</a></p>
                                     <!-- Social Login -->
                                     <div class="social-login">
                                         <a href="javascript:;"><img
@@ -90,4 +105,4 @@
             <!-- /Login Content -->
         </div>
     </div>
-@endsection
+</x-guest-layout>>

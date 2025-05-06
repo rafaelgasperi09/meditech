@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register', function () {
+    return view('Pages.register');
+});
+
 Route::get('/login', function () {
     return view('Pages/login');
 })->name('login');
@@ -144,9 +148,8 @@ Route::group(array('prefix' => 'settings','middleware'=>['auth','verified']), fu
 
     Route::get('/create_rapid_access', [SettingController::class, 'rapidAccess'])->name('setting.create_rapid_access');
 
-    Route::post('/store_consultation_template', [SettingController::class, 'consultationTemplateStore'])->name('setting.create_template_store');
+    Route::post('/create_cpt_user', [SettingController::class, 'cptUser'])->name('setting.create_cpt_user');
 
-    Route::post('/store_rapid_access', [SettingController::class, 'rapidAccessStore'])->name('setting.create_rapid_access_store');
 
 });
 
@@ -162,4 +165,3 @@ Route::group(array('prefix' => 'api'), function() {
 });
 
 
-require __DIR__.'/auth.php';
