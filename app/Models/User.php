@@ -67,6 +67,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Client::class,'user_clients');
     }
 
+    public function cpts(){
+        return $this->belongsToMany(Cpt::class,'user_cpts');
+    }
+
     public function getProfileNameAttribute(){
         $path = url('assets/img/profiles/avatar-02.jpg');
         if($this->profile_picture) $path = url('storage/'.$this->profile_picture);
