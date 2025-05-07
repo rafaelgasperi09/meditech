@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AppointmentController;
 use \App\Http\Controllers\ApiController;
 use \App\Http\Controllers\SettingController;
+use \App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,6 +24,12 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('Pages/login');
 })->name('login');
+
+Route::get('/forgot-password', function () {
+    return view('Pages/forgot-password');
+})->name('forgot-password');
+
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -148,7 +155,9 @@ Route::group(array('prefix' => 'settings','middleware'=>['auth','verified']), fu
 
     Route::get('/create_rapid_access', [SettingController::class, 'rapidAccess'])->name('setting.create_rapid_access');
 
-    Route::post('/create_cpt_user', [SettingController::class, 'cptUser'])->name('setting.create_cpt_user');
+    Route::get('/create_cpt_user', [SettingController::class, 'cptUser'])->name('setting.create_cpt_user');
+
+    Route::get('/create_working_hour_user', [SettingController::class, 'workingHourUser'])->name('setting.create_working_hour_user');
 
 
 });
