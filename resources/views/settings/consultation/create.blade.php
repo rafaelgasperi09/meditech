@@ -20,7 +20,26 @@
                                     <h4>  {{ __('Configurar campos de consulta') }}</h4>
                                 </div>
                             </div>
-                            <livewire:item-transfer/>
+                            <ul class="nav nav-pills navtab-bg nav-justified" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a href="#generales" data-bs-toggle="tab" aria-expanded="false" class="nav-link active" aria-selected="false" tabindex="-1" role="tab">
+                                        Generales
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a href="#urologia" data-bs-toggle="tab" aria-expanded="true" class="nav-link" aria-selected="true" role="tab">
+                                        Urologia
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane  show active" id="generales" role="tabpanel">
+                                    <livewire:item-transfer wire:key="generales"/>
+                                </div>
+                                <div class="tab-pane" id="urologia" role="tabpanel">
+                                    <livewire:item-transfer category="Urologia" wire:key="urologia"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

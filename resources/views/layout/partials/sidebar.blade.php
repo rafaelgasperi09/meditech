@@ -68,6 +68,7 @@
                     <ul style="display: none;">
                         <li><a class="{{ Request::is('settings/create_consultation_template') ? 'active' : '' }}"  href="{{ route('setting.create_template') }}">{{ __('Plantilla Consulta') }}</a></li>
                         <li><a class="{{ Request::is('settings/create_rapid_access') ? 'active' : '' }}"  href="{{ route('setting.create_rapid_access') }}">{{ __('Accesos Rapidos') }}</a></li>
+                        <li><a class="{{ Request::is('settings/create_working_hour_user') ? 'active' : '' }}"  href="{{ route('setting.create_working_hour_user') }}">{{ __('Horario Laboral') }}</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -321,9 +322,11 @@
                 {{--}}
             </ul>
             <div class="logout-btn">
-                <a href="{{ url('login') }}"><span class="menu-side"><img
-                            src="{{ URL::asset('/assets/img/icons/logout.svg') }}" alt=""></span>
-                    <span>Logout</span></a>
+                <a href="{{ url('login') }}">
+                    <span class="menu-side">
+                        <img src="{{ URL::asset('/assets/img/icons/logout.svg') }}" alt=""></span>
+                    <span>Logout</span>
+                </a>
             </div>
         </div>
     </div>

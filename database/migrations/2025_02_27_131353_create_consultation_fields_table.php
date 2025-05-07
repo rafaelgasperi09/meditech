@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('consultation_fields', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name',50);
-            $table->string('label',75);
+            $table->string('label',255);
             $table->string('section',75)->nullable();
             $table->string('description',255)->nullable();
             $table->string('type',50)->comment('text , date , list , options , api , daterange , textarea ,etc');

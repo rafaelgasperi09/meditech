@@ -4,13 +4,13 @@ Template Name: PreClinic - Medical and Hospital Admin Template
 Version      : 1.0
 */
 $(document).ready(function($) {
-	
+
 	// Variables declarations
 	var $wrapper = $('.main-wrapper');
 	var $pageWrapper = $('.page-wrapper');
 	var $slimScrolls = $('.slimscroll');
 	var $sidebarOverlay = $('.sidebar-overlay');
-	
+
 	// Sidebar
 	var Sidemenu = function() {
 		this.$menuItem = $('#sidebar-menu a');
@@ -36,7 +36,7 @@ $(document).ready(function($) {
 	}
 	// Sidebar Initiate
 	init();
-	
+
 	// Sidebar overlay
 	function sidebar_overlay($target) {
 		if($target.length) {
@@ -46,7 +46,7 @@ $(document).ready(function($) {
 			$sidebarOverlay.attr('data-reff', '#' + $target[0].id);
 		}
 	}
-	
+
 	// Mobile menu sidebar overlay
 	$(document).on('click', '#mobile_btn', function() {
 		var $target = $($(this).attr('href'));
@@ -55,7 +55,7 @@ $(document).ready(function($) {
 		$('#chat_sidebar').removeClass('opened');
 		return false;
 	});
-	
+
 	// Chat sidebar overlay
 	$(document).on('click', '#task_chat', function() {
 		var $target = $($(this).attr('href'));
@@ -63,7 +63,7 @@ $(document).ready(function($) {
 		sidebar_overlay($target);
 		return false;
 	});
-	
+
 	// Sidebar overlay reset
 	$sidebarOverlay.on('click', function() {
 		var $target = $($(this).attr('data-reff'));
@@ -75,7 +75,7 @@ $(document).ready(function($) {
 		}
 		return false;
 	});
-	
+
 	// Password
 	if($('.toggle-password').length > 0) {
 		$(document).on('click', '.toggle-password', function() {
@@ -99,7 +99,7 @@ $(document).ready(function($) {
 			}
 		});
 	}
-	
+
 	// Circle Progress Bar
 	function animateElements() {
 		$('.circle-bar2').each(function () {
@@ -119,13 +119,13 @@ $(document).ready(function($) {
 				});
 			}
 		});
-	}	
-	
+	}
+
 	if($('.circle-bar').length > 0) {
 		animateElements();
 	}
 	$(window).scroll(animateElements);
-	
+
 	// Select 2
 	if($('.select').length > 0) {
 		$('.select').select2({
@@ -133,14 +133,14 @@ $(document).ready(function($) {
 			width: '100%'
 		});
 	}
-	
+
 	// Floating Label
 	if($('.floating').length > 0) {
 		$('.floating').on('focus blur', function(e) {
 			$(this).parents('.form-focus').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
 		}).trigger('blur');
 	}
-	
+
 	// Right Sidebar Scroll
 	if($('#msg_list').length > 0) {
 		$('#msg_list').slimscroll({
@@ -161,7 +161,7 @@ $(document).ready(function($) {
 			$('.msg-sidebar .slimScrollDiv').height(msgrHeight);
 		});
 	}
-	
+
 	// Left Sidebar Scroll
 	if($slimScrolls.length > 0) {
 		$slimScrolls.slimScroll({
@@ -182,7 +182,7 @@ $(document).ready(function($) {
 			$('.sidebar .slimScrollDiv').height(rHeight);
 		});
 	}
-	
+
 	// Page wrapper height
 	var pHeight = $(window).height();
 	$pageWrapper.css('min-height', pHeight);
@@ -190,7 +190,7 @@ $(document).ready(function($) {
 		var prHeight = $(window).height();
 		$pageWrapper.css('min-height', prHeight);
 	});
-	
+
 	// Datetimepicker
 	if($('.datetimepicker').length > 0) {
 		$('.datetimepicker').datetimepicker({
@@ -227,7 +227,7 @@ $(document).ready(function($) {
     }
 
 	// Summernote
-	
+
 	if($('#summernote').length > 0) {
         $('#summernote').summernote({
 		  height: 300,                 // set editor height
@@ -244,7 +244,7 @@ $(document).ready(function($) {
                 items: [
                     'heading', '|',
                     'fontfamily', 'fontsize', '|',
-                    'alignment', '|', 
+                    'alignment', '|',
                     'fontColor', 'fontBackgroundColor', '|',
                     'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
                     'link', '|',
@@ -266,15 +266,15 @@ $(document).ready(function($) {
 		} );
 	}
 
-	// Counter 
-	
+	// Counter
+
 	if($('.counter').length > 0) {
 		$('.counter').counterUp({
 			 delay: 20,
 			 time: 2000
 		});
 	 }
-	 
+
 	 if($('#timer-countdown').length > 0) {
 		 $( '#timer-countdown' ).countdown( {
 			 from: 180, // 3 minutes (3*60)
@@ -285,31 +285,31 @@ $(document).ready(function($) {
 			 autostart: true
 		 });
 	 }
-	 
+
 	 if($('#timer-countup').length > 0) {
 		 $( '#timer-countup' ).countdown( {
 			 from: 0,
-			 to: 180 
+			 to: 180
 		 });
 	 }
-	 
+
 	 if($('#timer-countinbetween').length > 0) {
 		 $( '#timer-countinbetween' ).countdown( {
 			 from: 30,
-			 to: 20 
+			 to: 20
 		 });
 	 }
-	 
+
 	 if($('#timer-countercallback').length > 0) {
 		 $( '#timer-countercallback' ).countdown( {
 			 from: 10,
 			 to: 0,
 			 timerEnd: function() {
 				 this.css( { 'text-decoration':'line-through' } ).animate( { 'opacity':.5 }, 500 );
-			 } 
+			 }
 		 });
 	 }
-	 
+
 	 if($('#timer-outputpattern').length > 0) {
 		 $( '#timer-outputpattern' ).countdown( {
 			 outputPattern: '$day Days $hour Hour $minute Min $second Sec..',
@@ -317,13 +317,13 @@ $(document).ready(function($) {
 		 });
 	 }
 
-	 // Clipboard 
-	
+	 // Clipboard
+
 	if($('.clipboard').length > 0) {
 		var clipboard = new Clipboard('.btn');
 	}
 	// Popover
-	
+
 	if($('.popover-list').length > 0) {
 		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -332,20 +332,20 @@ $(document).ready(function($) {
 	}
 
 	// Form Wizard
-	
+
 	$(".next").on('click', function () { // Function Runs On NEXT Button Click
 		$(this).closest('.tab-pane').next().css("display" , "block").css("opacity" , "1");
 		$(this).closest('.tab-pane').css({
 			'display': 'none'
 		});
-	
+
 	});
 	$(".previous").on('click', function () { // Function Runs On NEXT Button Click
 		$(this).closest('.tab-pane').prev().css("display", "block");
 		$(this).closest('.tab-pane').css({
 			'display': 'none'
 		});
-	
+
 	});
 	// Tooltip
 
@@ -359,7 +359,7 @@ $(document).ready(function($) {
         //Second upload
         var secondUpload = new FileUploadWithPreview('mySecondImage')
 	}
-		
+
 	// CK Editor
 
 	if ($('#editor').length > 0) {
@@ -402,7 +402,7 @@ $(document).ready(function($) {
 		}
 		});
 	}
-	
+
 	// Time
 	if($('#datetimepicker3').length > 0) {
 		$(function () {
@@ -430,9 +430,8 @@ $(document).ready(function($) {
 			});
 		});
 	}
-	
-	
-	
+
+
 	// slick
 	if($('.center').length > 0) {
 		$('.center').slick({
@@ -462,18 +461,18 @@ $(document).ready(function($) {
 		  ]
 		});
 	}
-	
+
 	// Bootstrap Tooltip
 	if($('[data-toggle="tooltip"]').length > 0) {
 		$('[data-toggle="tooltip"]').tooltip();
 	}
-	
+
 	// Mobile Menu
 	$(document).on('click', '#open_msg_box', function() {
 		$wrapper.toggleClass('open-msg-box');
 		return false;
 	});
-	
+
 	// Lightgallery
 	if($('#lightgallery').length > 0) {
 		$('#lightgallery').lightGallery({
@@ -481,12 +480,12 @@ $(document).ready(function($) {
 			selector: 'a'
 		});
 	}
-	
+
 	// Incoming call popup
 	if($('#incoming_call').length > 0) {
 		$('#incoming_call').modal('show');
 	}
-	
+
 	// JQuery counterUp
 
 	if($('.dash-count .counter-up').length > 0) {
@@ -495,7 +494,7 @@ $(document).ready(function($) {
             time: 1500
         });
 	}
-	
+
 	// Summernote
 	if($('.summernote').length > 0) {
 		$('.summernote').summernote({
@@ -505,7 +504,7 @@ $(document).ready(function($) {
 			focus: false
 		});
 	}
-	
+
 	// Check all email
 	$(document).on('click', '#check_all', function() {
 		$('.checkmail').click();
@@ -522,12 +521,12 @@ $(document).ready(function($) {
 			});
 		});
 	}
-	
+
 	// Mail important
 		$(document).on('click', '.mail-important', function() {
 		$(this).find('i.fa').toggleClass('fa-star').toggleClass('fa-star-o');
 	});
-	
+
 	// Dropfiles
 	if($('#drop-zone').length > 0) {
 		var dropZone = document.getElementById('drop-zone');
@@ -554,7 +553,7 @@ $(document).ready(function($) {
 			return false;
 		};
 	}
-	
+
 	// Small Sidebar
 	if(screen.width >= 992) {
 		$(document).on('click', '#toggle_btn', function() {
@@ -586,7 +585,7 @@ $(document).ready(function($) {
 		feather.replace();
 		}
 	// Checkbox Select
-	
+
 		$('.app-listing .selectBox').on("click", function() {
 			$(this).parent().find('#checkBoxes').fadeToggle();
 			$(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
@@ -608,7 +607,7 @@ $(document).ready(function($) {
 			});
 		});
 		// Invoices Table Add More
-	
+
 		$(".add-table-items").on('click','.remove-btn', function () {
 			$(this).closest('.add-row').remove();
 			return false;
@@ -632,7 +631,7 @@ $(document).ready(function($) {
 					'<a href="#" class="service-trash1"><i class="fa fa-minus-circle me-1"></i>Service Charge</a> <span>$ 4</span' +
 				'</div>' +
 			'</div>';
-			
+
 			$(".links-info-one").append(experiencecontent);
 			return false;
 		});
@@ -640,8 +639,8 @@ $(document).ready(function($) {
 			$(this).closest('.links-cont').remove();
 			return false;
 		});
-		
-		
+
+
 		 $(".links-info-discount").on('click','.service-trash-one', function () {
 			$(this).closest('.links-cont-discount').remove();
 			return false;
@@ -651,7 +650,7 @@ $(document).ready(function($) {
 		$(document).on("click",".logo-hide-btn",function () {
 			$(this).parent().hide();
 		});
-		
+
 		$(document).on("click",".add-btns",function () {
 			var experiencecontent = '<tr class="add-row">' +
 				'<td>' +
@@ -678,7 +677,7 @@ $(document).ready(function($) {
 				'<a href="javascript:void(0);" class="remove-btn"><i class="fa fa-trash-alt"></i></a>' +
 				'</td>' +
 			'</tr>';
-			
+
 			$(".add-table-items").append(experiencecontent);
 			return false;
 		});
@@ -693,7 +692,7 @@ $(document).ready(function($) {
 					'</div>' +
 				'</div>' +
 			'</div>';
-			
+
 			$(".settings-form").append(experiencecontent);
 			return false;
 		});

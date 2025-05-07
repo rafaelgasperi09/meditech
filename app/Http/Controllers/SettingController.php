@@ -15,13 +15,11 @@ class SettingController extends Controller
         return view('settings.rapidAccess.create');
     }
 
-    public function consultationTemplateStore(Request $request){
-
-
-        dd($request->all());
+    public function cptUser(Request $request){
+        return view('settings.cpts.create');
     }
 
-    public function rapidAccessStore(Request $request){
-
+    public function workingHourUser(Request $request){
+        return view('settings.working_hour.create');
     }
 }

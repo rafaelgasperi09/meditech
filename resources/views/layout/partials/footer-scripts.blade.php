@@ -67,4 +67,4 @@
 <!-- Custom JS -->
 <script src="{{ URL::asset('/assets/js/app.js') }}"></script>
 
-<script src="{{ URL::asset('/assets/js/custom.js') }}"></script>
+<script src="{{ URL::asset('/assets/js/custom.js?time='.time()) }}"></script>

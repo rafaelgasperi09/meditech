@@ -13,6 +13,7 @@ class ItemTransfer extends Component
 
     public $client_id;
 
+    public $category=null;
 
     public function mount()
     {
@@ -26,15 +27,15 @@ class ItemTransfer extends Component
         }
 
         if(count($selecionados)==0){
-            $this->availableItems =ConsultationField::get()->toArray();
+            $this->availableItems =ConsultationField::whereCategory($this->category)->get()->toArray();
             $this->selectedItems = [];
         }else{
 
             $diff = $disponibles->diff($selecionados);
             $diff2 = $selecionados->diff($disponibles);
 
-            $this->availableItems = ConsultationField::whereIn('id',$diff)->get()->toArray();
-            $this->selectedItems = ConsultationField::whereIn('id',$selecionados)->get()->toArray();;
+            $this->availableItems = ConsultationField::whereCategory($this->category)->whereIn('id',$diff)->get()->toArray();
+            $this->selectedItems = ConsultationField::whereCategory($this->category)->whereIn('id',$selecionados)->get()->toArray();;
         }
     }
 
