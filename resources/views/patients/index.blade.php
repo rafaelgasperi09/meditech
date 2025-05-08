@@ -17,13 +17,12 @@
                     <div class="card card-table show-entire p-0 table-dash">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <livewire:data-table model="{{$model}}"
-                                                     :columns="['id', 'profile_name', 'birthdate','full_id_number','email','whatsapp','acciones']"
-                                                     :actions="['edit','delete']"
-                                                     routename="patient"
-                                                     sortField="first_name"
-                                                     sortDirecction="asc"
-                                                     wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
+                                <livewire:patient.data-table model="{{$model}}"
+                                                             routename="patient"
+                                                             sortField="first_name"
+                                                             sortDirecction="asc"
+                                                             title="{{ __('generic.list') }} {{ __('appointment.titles') }}"
+                                                             wire:key="{{\Illuminate\Support\Str::random(5)}}"/>
                             </div>
                         </div>
                     </div>

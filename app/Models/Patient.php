@@ -61,4 +61,8 @@ class Patient extends BaseModel
                                     </a>
                     </div>';
     }
+
+    public function notes(){
+        return $this->hasMany(PatientNote::class);
+    }
 }

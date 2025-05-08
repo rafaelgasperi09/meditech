@@ -26,4 +26,5 @@ return [
     'updated_at'=>'Fecha de modificación',
     'profile_name'=>'Nombre',
     'profile'=>'Perfil',
+    'add_note'=>'Agrager Nota'
 ];

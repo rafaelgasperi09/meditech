@@ -69,8 +69,6 @@ class DataTable extends Component
             })
             ->paginate($this->pagination);
 
-        return view('livewire.appointment.data-table', [
-            'data' => $data,
-        ]);
+        return view('livewire.appointment.data-table', [ 'data' => $data, ]);
     }
 }
