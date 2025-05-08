@@ -17,4 +17,8 @@ class Medicine extends BaseModel
     public function components(){
         return $this->hasMany(MedicineActiveComponent::class);
     }
+
+    public function getFullNameAttribute(){
+        return $this->generic_name." (".$this->type." ".$this->mgs." ".$this->mgs_type.")";
+    }
 }

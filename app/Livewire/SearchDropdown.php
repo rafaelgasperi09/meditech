@@ -18,6 +18,7 @@ class SearchDropdown extends Component
     public $consultation_field;
     public $consultation;
     public $is_patient = false;
+    public $selectedLists=[];
 
     public function mount($path,$consultation_field_id=null,$consultation_id=null,$is_patient=false){
         $this->path = url($path);
@@ -26,6 +27,7 @@ class SearchDropdown extends Component
         $this->consultation_field = ConsultationField::find($consultation_field_id);
 
         $this->is_patient=$is_patient;
+
     }
 
     public function updatedQuery()

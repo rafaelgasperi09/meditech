@@ -8,6 +8,7 @@ use Livewire\Component;
 class SelectorItem extends Component
 {
     public $items;
+    public $actives=[];
     public function render()
     {
         return view('livewire.selector-item');
@@ -15,5 +16,6 @@ class SelectorItem extends Component
 
     public function mount($list_type){
         $this->items = ConsultationList::whereType($list_type)->orderBy('order')->get();
+
     }
 }

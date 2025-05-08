@@ -59,13 +59,16 @@ class ApiController extends Controller
         if($request->has('dropdown'))
             $select = "id,concat(code,'|',description_es)  as name";
 
-        $data = Diagnostic::selectRaw($select)
+        $query = Diagnostic::selectRaw($select)
             ->when($request->has('q'),function ($q) use($request){
                 $q->whereRaw("(code LIKE '%".$request->q."%' or description LIKE '%".$request->q."%' or description_es LIKE '%".$request->q."%')");
-            })
-            ->take(10)
-            ->get();
+            });
 
+           if($request->has('ramdom')) {
+               $data = $query->inRandomOrder()->take(1)->first();
+           }else{
+               $data = $query->take(10)->get();
+           }
 
         return response()->json($data);
 
@@ -77,14 +80,17 @@ class ApiController extends Controller
         if($request->has('dropdown'))
             $select = "id,concat(code,'|',description_es)  as name";
 
-        $data = Cpt::selectRaw($select)
+        $query = Cpt::selectRaw($select)
             ->when($request->has('q'),function ($q) use($request){
                 $q->whereRaw("(code LIKE '%".$request->q."%' or description LIKE '%".$request->q."%' or description_es LIKE '%".$request->q."%')");
             })
-            ->whereType($type)
-            ->take(10)
-            ->get();
+            ->whereType($type);
 
+        if($request->has('ramdom')) {
+            $data = $query->inRandomOrder()->take(1)->first();
+        }else{
+            $data = $query->take(10)->get();
+        }
 
         return response()->json($data);
 
@@ -96,12 +102,16 @@ class ApiController extends Controller
         if($request->has('dropdown'))
             $select = "id,name";
 
-        $data = MedicalSpeciality::selectRaw($select)
+        $query = MedicalSpeciality::selectRaw($select)
             ->when($request->has('q'),function ($q) use($request){
                 $q->whereRaw("(id LIKE '%".$request->q."%' or name LIKE '%".$request->q."%')");
-            })
-            ->get();
+            });
 
+        if($request->has('ramdom')) {
+            $data = $query->inRandomOrder()->take(1)->first();
+        }else{
+            $data = $query->take(10)->get();
+        }
 
         return response()->json($data);
 
@@ -113,12 +123,16 @@ class ApiController extends Controller
         if($request->has('dropdown'))
             $select = "id,concat(home_name,' de ',mgs,' ',mgs_type,' en ',type) as name";
 
-        $data = Medicine::selectRaw($select)
+        $query = Medicine::selectRaw($select)
             ->when($request->has('q'),function ($q) use($request){
                 $q->whereRaw("(ndc_code LIKE '%".$request->q."%' or home_name LIKE '%".$request->q."%' or generic_name LIKE '%".$request->q."%')");
-            })
-            ->get();
+            });
 
+        if($request->has('ramdom')) {
+            $data = $query->inRandomOrder()->take(1)->first();
+        }else{
+            $data = $query->take(10)->get();
+        }
 
         return response()->json($data);
 

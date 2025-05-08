@@ -22,7 +22,7 @@ class ConsultationData extends BaseModel
     }
 
     public function record(){
-        return $this->belongsTo($this->model_name,'record_id');
+        return $this->belongsTo('App\\Models\\'.$this->model_name,'record_id');
     }
 
     public function diagnostic(){

@@ -11,4 +11,8 @@ class Cpt extends Model
     public function area(){
         return $this->belongsTo(CptArea::class);
     }
+
+    public function getFullNameAttribute() {
+        return $this->code . ' | ' . $this->description_es;
+    }
 }

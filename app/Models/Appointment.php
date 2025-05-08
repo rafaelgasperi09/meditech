@@ -53,4 +53,8 @@ class Appointment extends BaseModel
     public function detail(){
         return $this->hasMany(AppointmentDetail::class);
     }
+
+    public function consultation(){
+        return $this->hasOne(Consultation::class,'appointment_id');
+    }
 }

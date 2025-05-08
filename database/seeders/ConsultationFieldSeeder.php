@@ -23,6 +23,7 @@ class ConsultationFieldSeeder extends Seeder
        $this->referencias();
        $this->medicamentos();
        $this->notas_generales();
+       $this->urology();
     }
     public function enfermedad_actual(){
         /*----------- QUEJA PRINCIPAL------------*/
@@ -496,7 +497,6 @@ class ConsultationFieldSeeder extends Seeder
             'order'=>1,
         ]);
     }
-
     public function cpts(){
         /*----------- LABORATORIOS ------------*/
         ConsultationField::create([
@@ -505,7 +505,7 @@ class ConsultationFieldSeeder extends Seeder
             'section'=>'Laboratorios',
             'description'=>'',
             'type'=>'api',
-            'api_path'=>'api/cpts?type=laboratory',
+            'api_path'=>'api/cpts/laboratory',
             'length'=>100,
             'order'=>1,
             'need_diagnostic'=>1,
@@ -537,7 +537,7 @@ class ConsultationFieldSeeder extends Seeder
             'section'=>'Imagenes',
             'description'=>'',
             'type'=>'api',
-            'api_path'=>'api/cpts?type=images',
+            'api_path'=>'api/cpts/images',
             'length'=>100,
             'order'=>1,
             'need_diagnostic'=>1,
@@ -569,7 +569,7 @@ class ConsultationFieldSeeder extends Seeder
             'section'=>'Procedimientos',
             'description'=>'',
             'type'=>'api',
-            'api_path'=>'api/cpts?type=procedure',
+            'api_path'=>'api/cpts/procedure',
             'length'=>100,
             'order'=>1,
             'need_diagnostic'=>1,
@@ -650,6 +650,161 @@ class ConsultationFieldSeeder extends Seeder
             'need_diagnostic'=>1,
             'ask_qty'=>1,
             'ask_notes'=>1
+        ]);
+    }
+
+    public function urology(){
+        /*----------- urology ------------*/
+        ConsultationField::create([
+            'name'=>'vaciado_incompleto',
+            'label'=>'Vaciado incompleto',
+            'label_eng'=>'Incomplete Emptying',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia ha tenido la sensación de no vaciar la vejiga?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you had the sensation of not emptying your bladder?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'frecuencia',
+            'label'=>'Frecuencia',
+            'label_eng'=>'Frequency',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia ha tenido que orinar menos de cada dos horas?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you had to urinate less than every two hours?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'intermitencia',
+            'label'=>'Intermitencia',
+            'label_eng'=>'Intermittency',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia ha notado que se detuvo y comenzó de nuevo varias veces al orinar?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you found you stopped and started again several times when you urinated?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'urgencia',
+            'label'=>'Urgencia',
+            'label_eng'=>'Urgency',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia le ha resultado difícil posponer la micción?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you found it difficult to postpone urination?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'flujo_debil',
+            'label'=>'Flujo Débil',
+            'label_eng'=>'Weak stream',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia ha tenido un chorro de orina débil?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you had a weak urinary stream?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'tirante',
+            'label'=>'Tirante',
+            'label_eng'=>'Straining',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Con qué frecuencia ha tenido que esforzarse para empezar a orinar?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nada","1":"Menos de 1 de cada 5 veces","2":"Menos de la mitad de las veces","3":"Cerca de la mitad de las veces","4":"Más de la mitad de las time","5":"Casi siempre"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Not at all","1":"Less than 1 in 5 times","2":"Less than half the time","3":"About half the time","4=":"More than half the time","5":"Almost always"}',
+            'description_eng'=>'How often have you had to strain to start urination?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'noturno',
+            'label'=>'Noturno',
+            'label_eng'=>'Nocturia',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Cuántas veces suele levantarse por la noche para orinar?',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Nunca","1":"1 Vez","2":"2 Veces ","3":"3 Veces","4":"4 Veces","5":"5 Veces o mas"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"None","1":"1 Time","2":"2 times ","3":"3 Times","4":"4 Times","5":"5 Times or more"}',
+            'description_eng'=>'How many times do you typically get up at night to urinate?',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
+        ]);
+
+        ConsultationField::create([
+            'name'=>'calidad_vida_urinaria',
+            'label'=>'¿Si tuviera que pasar el resto de su vida con su condición urinaria tal como está ahora, ¿cómo se sentiría al respecto?',
+            'label_eng'=>'If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel about that?',
+            'section'=>'Índice Internacional de Síntomas Prostáticos',
+            'description'=>'¿Evaluación de la calidad de vida por síntomas urinarios',
+            'type'=>'options',
+            'length'=>4000,
+            'order'=>1,
+            'options'=>'{"0":"Encantado","1":"Complacido","2":"Más satisfecho","3":"Mixto: igualmente satisfecho/insatisfecho","4":"Más bien insatisfecho","5":"Descontento","6 ":"Terrible"}',
+            'need_diagnostic'=>0,
+            'ask_qty'=>0,
+            'ask_notes'=>0,
+            'options_eng'=>'{"0":"Delighted","1":"Pleased","2":"Mostly satisfied","3":"Mixed: Equally satisfied /dissatisfied","4":"Mostly dissatisfied","5":"Unhappy","6":"Terrible"}',
+            'description_eng'=>'Assessment of quality of life due to urinary symptoms',
+            'category'=>'Urologia',
+            'medical_speciality_id'=>42,
         ]);
     }
 }

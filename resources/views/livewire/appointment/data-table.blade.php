@@ -45,7 +45,15 @@
                                                 <i class="fa fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="{{route('consultation.create',$appointment->id)}}" ><i class="fa fa-clock-o"></i> Iniciar Consulta</a>
+                                                <a class="dropdown-item" href="{{route('consultation.show',$appointment->id)}}" >
+                                                    <i class="fa fa-clock-o"></i>
+                                                    @if($appointment->status=='programada')
+                                                        {{__('appointment.start')}}
+                                                    @else
+                                                        {{__('appointment.edit')}}
+                                                    @endif
+                                                        {{__('appointment.consultation')}}
+                                                </a>
                                                 <a class="dropdown-item"  href="{{ route('appointment.edit',$appointment->id) }}">  <i  class="fa-solid fa-pen-to-square m-r-5"></i>
                                                     {{__('generic.edit')}}
                                                 </a>

@@ -11,5 +11,10 @@ return [
     'date'=>'Fecha',
     'time'=>'Hora',
     'status'=>'Estatus',
-    'booking'=>'Agendar Cita'
+    'booking'=>'Agendar Cita',
+    'consultation'=>'Consulta',
+    'start'=>'Iniciar',
+    'edit'=>'Editar',
+    'show'=>'Ver',
+    'detail'=>'Detalle',
 ];

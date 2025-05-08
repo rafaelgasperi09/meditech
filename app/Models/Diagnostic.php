@@ -15,4 +15,8 @@ class Diagnostic extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function getFullNameAttribute() {
+        return $this->code . ' | ' . $this->description_es;
+    }
 }
