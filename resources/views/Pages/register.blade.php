@@ -23,7 +23,7 @@
                                 </div>
                                 <h2>Getting Started</h2>
                                 <!-- Form -->
-                                <form action="{{ route('patient.store') }}" method="POST" id="form_register">
+                                <form action="{{ route('patient.public.store') }}" method="POST" id="form_register">
                                     @csrf
                                     <div class="form-group">
                                         <label>Full Name <span class="login-danger">*</span></label>
@@ -78,9 +78,14 @@
                                             <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> I agree to the
                                                 <a href="javascript:;">&nbsp terms of service </a>&nbsp and <a
                                                     href="javascript:;">&nbsp privacy policy </a>
-                                                <input type="checkbox" name="radio">
+                                                <input type="checkbox" name="terms_and_privacy">
                                                 <span class="checkmark"></span>
                                             </label>
+                                            <div class="text-danger pt-2">
+                                                @error('terms_and_privacy')
+                                                    {{$message}}
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <h4>Faltarian los datos de la cita para programarla (Fecha , Hora , Doctor , Sucusal ? ,consultroio ? , esto supongo que se puede preguntar cuando se confirme la cita )</h4>

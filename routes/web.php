@@ -55,6 +55,8 @@ Route::group(array('prefix' => 'consultation','middleware'=>['auth','verified'])
 
 });
 
+Route::post('/store_public', [PatientController::class, 'store_public'])->name('patient.public.store');
+
 Route::group(array('prefix' => 'clients','middleware'=>['auth','verified']), function() {
 
     Route::get('/', [ClientController::class, 'index'])->name('client.index');
