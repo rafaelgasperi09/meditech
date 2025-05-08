@@ -23,7 +23,7 @@
                                 </div>
                                 <h2>Getting Started</h2>
                                 <!-- Form -->
-                                <form action="{{ route('patient.create') }}" method="POST">
+                                <form action="{{ route('patient.store') }}" method="POST" id="form_register">
                                     @csrf
                                     <div class="form-group">
                                         <label>Full Name <span class="login-danger">*</span></label>
@@ -39,6 +39,16 @@
                                         <input class="form-control" type="text" id="email" name="email">
                                         <div class="text-danger pt-2">
                                             @error('email')
+                                                {{$message}}
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number<span class="login-danger w-full">*</span></label>
+                                        <input class="form-control" type="tel" id="phone" name="phone" required>
+                                        <p id="message"></p>
+                                        <div class="text-danger pt-2">
+                                            @error('phone')
                                                 {{$message}}
                                             @enderror
                                         </div>
@@ -105,4 +115,6 @@
             <!-- /Login Content -->
         </div>
     </div>
-</x-guest-layout>>
+    @vite(['resources/js/app.js'])
+</x-guest-layout>
+

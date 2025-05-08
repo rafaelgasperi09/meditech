@@ -19,7 +19,7 @@ class PatientController extends Controller
     }
 
     public function store(Request $request){
-
+        dd($request->all());
     }
 
     public function profile(Request $request,$id){
