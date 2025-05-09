@@ -19,7 +19,19 @@ class PatientController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+        
+    }
+    public function store_public(Request $request){
+       // dd($request->all());
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'full_phone' => 'required',
+            'password' => "required",
+            'terms_and_privacy' => "required"
+
+        ]);
     }
 
     public function profile(Request $request,$id){
