@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PatientNote extends BaseModel
 {
     protected $table='patient_notes';
-    protected $fillable=['patient_id','user_id','note','status'];
+    protected $fillable=['patient_id','user_id','note','status','type'];
 
     public function patient(){
         return $this->belongsTo(Patient::class);
