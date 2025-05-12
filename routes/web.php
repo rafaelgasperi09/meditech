@@ -21,6 +21,10 @@ Route::get('/register', function () {
     return view('Pages.register');
 });
 
+Route::get('/register2', function () {
+    return view('patients.register-appointment');
+});
+
 Route::get('/login', function () {
     return view('Pages/login');
 })->name('login');
@@ -56,6 +60,7 @@ Route::group(array('prefix' => 'consultation','middleware'=>['auth','verified'])
 });
 
 Route::post('/store_public', [PatientController::class, 'store_public'])->name('patient.public.store');
+Route::post('/store_public2', [PatientController::class, 'store_public2'])->name('patient.public2.store');
 
 Route::group(array('prefix' => 'clients','middleware'=>['auth','verified']), function() {
 
