@@ -33,8 +33,8 @@
 			
 				
 			<!-- Page Wrapper -->
-            <div class="flex items-stretch">
-                <div class="content container-fluid w-75 self-center">
+            <div class="">
+                <div class="content container-fluid w-75">
 				
 			
                     <div class="row">					
@@ -83,7 +83,7 @@
                                                         <div class="col-lg-6">
                                                             <div class="input-block mb-3">
                                                                 <label for="basicpill-phoneno-input" class="form-label">Phone</label>
-                                                                <input type="text" class="form-control" id="basicpill-phoneno-input">
+                                                                <input type="tel" class="form-control" id="phone" name="phone">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
@@ -97,14 +97,14 @@
 													<div class="row">
                                                         <div class="col-lg-6">
                                                             <div class="input-block mb-3">
-                                                                <label for="basicpill-phoneno-input" class="form-label">Password</label>
-                                                                <input type="text" class="form-control" id="basicpill-phoneno-input">
+                                                                <label for="basicpill-password-input" class="form-label">Password</label>
+                                                                <input type="password" class="form-control" id="basicpill-password-input">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <div class="input-block mb-3">
-                                                                <label for="basicpill-email-input" class="form-label">New Password</label>
-                                                                <input type="email" class="form-control" id="basicpill-email-input">
+                                                                <label for="basicpill-confirmpassword-input" class="form-label">Confirm Password</label>
+                                                                <input type="password" class="form-control" id="basicpill-confirmpassword-input">
                                                             </div>
                                                         </div>
                                                     </div>
