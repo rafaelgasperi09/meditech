@@ -49,8 +49,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 login-wrap-bg">
-                        <div class="card flex items-center">
+                    <div class="col-lg-6 login-wrap-bg flex items-center justify-center">
+                        <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title mb-0">Formulario de Registro</h4>
                             </div>
@@ -85,7 +85,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-firstname-input"
-                                                                class="form-label">First name</label>
+                                                                class="form-label">First name<span class="login-danger">*</span></label>
                                                             <input type="text" class="form-control"
                                                                 id="basicpill-firstname-input">
                                                         </div>
@@ -93,7 +93,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-lastname-input"
-                                                                class="form-label">Last name</label>
+                                                                class="form-label">Last name<span class="login-danger">*</span></label>
                                                             <input type="text" class="form-control"
                                                                 id="basicpill-lastname-input">
                                                         </div>
@@ -104,7 +104,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-phoneno-input"
-                                                                class="form-label">Phone</label>
+                                                                class="form-label">Phone<span class="login-danger">*</span></label>
                                                             <input type="tel" class="form-control" id="phone"
                                                                 name="phone">
                                                         </div>
@@ -112,7 +112,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-email-input"
-                                                                class="form-label">Email</label>
+                                                                class="form-label">Email<span class="login-danger">*</span></label>
                                                             <input type="email" class="form-control"
                                                                 id="basicpill-email-input">
                                                         </div>
@@ -123,7 +123,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-password-input"
-                                                                class="form-label">Password</label>
+                                                                class="form-label">Password<span class="login-danger">*</span></label>
                                                             <input type="password" class="form-control"
                                                                 id="basicpill-password-input">
                                                         </div>
@@ -131,7 +131,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="input-block mb-3">
                                                             <label for="basicpill-confirmpassword-input"
-                                                                class="form-label">Confirm Password</label>
+                                                                class="form-label">Confirm Password<span class="login-danger">*</span></label>
                                                             <input type="password" class="form-control"
                                                                 id="basicpill-confirmpassword-input">
                                                         </div>
@@ -540,7 +540,53 @@
 
     <!-- Custom JS -->
     <script src="assets/js/app.js"></script>
+<script>
+	 $('#myForm').submit(function(event) {
+            event.preventDefault();  // Evitamos el envío tradicional del formulario
+	 
+			            // Recopilamos los datos del formulario
 
+			       $.ajax({
+                url: 'api/generate_unblock_code',  // URL donde quieres enviar los datos
+                method: 'POST',  // Método HTTP a utilizar
+                data: formData,  // Los datos del formulario
+                success: function(response) {
+                    // Aquí manejamos la respuesta del servidor en caso de éxito
+
+                    $("#loadingModal").modal('hide');
+
+                    if(response.success){
+                        iziToast.success({
+                            position: 'topRight',
+                            message: response.message,
+                            timeout: 15000,
+                        });
+                        $("#patient_id").val('');
+                        $("#patient_last_name").val('');
+                        $("#patient_date_of_birth").val('');
+                    }else{
+                        iziToast.error({
+                            position: 'topRight',
+                            message: response.message,
+                            timeout: 15000,
+                        });
+                    }
+
+                },
+                error: function(xhr, status, error) {
+                    // Aquí manejamos los errores en la llamada AJAX
+                    console.error('Error en la llamada AJAX:', error);
+                    console.log(error,xhr,status);
+                    $("#loadingModal").modal('hide');
+                    iziToast.error({
+                        position: 'topRight',
+                        message: error,
+                        timeout: 15000,
+                    });
+                }
+            });
+	 });
+</script>
 </body>
 
 </html>
